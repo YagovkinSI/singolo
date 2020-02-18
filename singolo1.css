@@ -76,9 +76,8 @@ p {
 	padding-bottom: 31px; 
 }
 
-.header-logo {	
+.logo {	
 	display: inline-block;
-	color: #ffffff;
 	font-size: 2.5rem;
 	font-weight: bold; 
 	text-decoration: none;
@@ -86,7 +85,11 @@ p {
 	display: inline-block;
 }
 
-.logo-star {
+.logo__color_1 {
+	color: #ffffff;
+}
+
+.logo__color_2 {
 	color: #f06c64;
 }
 
@@ -143,45 +146,66 @@ p {
 .slider {
 }
 
+.phone_1 {
+	position: absolute;
+	top: 270px;
+	left: 193px;
+}
+
+.phone_2 {
+	position: absolute;
+	top: 270px;
+	left: 627px;
+}
+
 .shadow {
 	position: absolute;
 	width: 485px;
 }
 
 .shadow__vertical {
+	position: absolute;
 	transform: rotate(90deg) scale(1, -1);
-	top: 270px;
-	left: 193px;
-}
-
-.shadow__horizontal {
-	top: 270px;
-	left: 627px;
 }
 
 .phone {
 	position: absolute;
 	width: 458px;
-
 }
 
 .phone__vertical {
+	position: absolute;
 	transform: rotate(270deg);
-	top: 270px;
-	left: 193px;
+}
+
+.phone_content_1 {
+	position: absolute;
+	background-image: url(assets/first_phone_content.png);
+	background-position-x: -14px;
+	background-position-y: -135px;
+	width: 188px;
+	height: 333px;
+	top: -57px;
+	left: 135px;
+}
+
+.shadow__horizontal {
+	position: absolute;
 }
 
 .phone__horizontal {
-	top: 270px;
-	left: 627px;
+	position: absolute;
 }
 
-.content_1 {
-
-}
-
-.content_2 {
-
+.phone_content_2 {
+	position: absolute;
+	background-image: url(assets/second_phone_content.png);
+	background-position-x: -125px;
+	background-position-y: -120px;
+	width: 333px;
+	height: 188px;
+	top: 14px;
+	left: 60px;
 }
 
 .splitter_slider {
