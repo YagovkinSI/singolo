@@ -76,9 +76,8 @@ p {
 	padding-bottom: 31px; 
 }
 
-.header-logo {	
+.logo {	
 	display: inline-block;
-	color: #ffffff;
 	font-size: 2.5rem;
 	font-weight: bold; 
 	text-decoration: none;
@@ -86,7 +85,11 @@ p {
 	display: inline-block;
 }
 
-.logo-star {
+.logo__color_1 {
+	color: #ffffff;
+}
+
+.logo__color_2 {
 	color: #f06c64;
 }
 
