@@ -26,7 +26,13 @@
 
 html {
 	font-size: 10px;
+	font-family: "Lato", sans-serif;
 }
+
+h1 {
+	display: inline-block;
+}
+
 
 .wrapper {	
 	max-width: 940px;
@@ -34,8 +40,46 @@ html {
 }
 
 .header {
-	height: 89px;
 	background-color: #2d303a;
+	padding-top: 28px; 
+	padding-bottom: 31px; 
+}
+
+.header-logo {	
+	display: inline-block;
+	color: #ffffff;
+	font-size: 2.5rem;
+	font-weight: bold; 
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.logo-star {
+	color: #f06c64;
+}
+
+.header-nav{
+	display: inline-block;
+	float: right;
+}
+
+.nav-li {
+	display: inline-block;	
+	text-transform: uppercase;
+	margin-left: 26px;
+	margin-top: 13px;
+}
+
+.nav-link {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #ffffff;	
+	text-decoration: none;
+}
+
+.nav-link_active {
+	color: #f06c64;	
 }
 
 .splitter {
