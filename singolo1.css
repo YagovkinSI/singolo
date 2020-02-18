@@ -19,6 +19,47 @@
 	font-weight: normal;
 }
 
-html{
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
 	font-size: 10px;
+}
+
+.wrapper {	
+	max-width: 940px;
+	margin: auto;
+}
+
+.header {
+	height: 89px;
+	background-color: #2d303a;
+}
+
+.splitter {
+	height: 6px;
+}
+
+.splitter_header {
+	background-color: #323746;	
+}
+
+.slider-block {
+	height: 594px;
+	background-color: #f06c64;
+}
+
+.splitter_slider {
+	background-color: #ea676b;	
+}
+
+.our-services-block {
+	height: 494px;
+	background-color: #f2f2f2;
+}
+
+.splitter_main {
+	background-color: #ffffff;	
 }
