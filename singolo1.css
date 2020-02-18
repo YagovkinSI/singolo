@@ -123,7 +123,65 @@ p {
 
 .slider-block {
 	height: 594px;
-	background-color: #f06c64;
+	background-color: #f06c64;	
+}
+
+.chev {
+	padding-top: 280px;
+	height: 26px;
+}
+
+.chev__left {
+	float: left;
+}
+
+.chev__rigth {
+	float: right;
+	transform: scale(-1, 1);
+}
+
+.slider {
+}
+
+.shadow {
+	position: absolute;
+	width: 485px;
+}
+
+.shadow__vertical {
+	transform: rotate(90deg) scale(1, -1);
+	top: 270px;
+	left: 193px;
+}
+
+.shadow__horizontal {
+	top: 270px;
+	left: 627px;
+}
+
+.phone {
+	position: absolute;
+	width: 458px;
+
+}
+
+.phone__vertical {
+	transform: rotate(270deg);
+	top: 270px;
+	left: 193px;
+}
+
+.phone__horizontal {
+	top: 270px;
+	left: 627px;
+}
+
+.content_1 {
+
+}
+
+.content_2 {
+
 }
 
 .splitter_slider {
