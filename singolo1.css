@@ -168,23 +168,24 @@ p {
 }
 
 .slider {
+	position: relative;
 }
 
 .phone_1 {
 	position: absolute;
-	top: 270px;
-	left: 193px;
+	top: 174px;
+	left: -50px;
 }
 
 .phone_2 {
 	position: absolute;
-	top: 270px;
-	left: 627px;
+	top: 174px;
+	left: 385px;
 }
 
 .shadow {
 	position: absolute;
-	width: 485px;
+	height: 240px;
 	z-index: 10;
 }
 
@@ -195,12 +196,11 @@ p {
 
 .phone {
 	position: absolute;
-	width: 458px;
+	height: 215px;
 	z-index: 20;
 }
 
 .phone__vertical {
-	position: absolute;
 	transform: rotate(270deg);
 }
 
@@ -212,7 +212,7 @@ p {
 	width: 188px;
 	height: 333px;
 	top: -57px;
-	left: 135px;
+	left: 136px;
 	z-index: 30;
 }
 
@@ -228,7 +228,7 @@ p {
 	position: absolute;
 	background-image: url(assets/second_phone_content.png);
 	background-position-x: -125px;
-	background-position-y: -120px;
+	background-position-y: -119px;
 	width: 333px;
 	height: 188px;
 	top: 14px;
