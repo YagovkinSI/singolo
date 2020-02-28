@@ -47,3 +47,33 @@ h4 {
 	margin: auto;
 	padding: 0px 40px;
 }
+
+.splitter {
+	height: 6px;
+}
+
+.tags-li{
+	display: inline-block;
+}
+
+.tags-link {
+	text-decoration: none;
+}
+
+.portfolio {
+	background-color: #2d303a;
+}
+
+.splitter_portfolio {
+	background-color: #323746;
+}
+
+.about-us {
+	background-color: #f2f2f2;
+}
+
+.splitter_about-us {
+	background-color: #ffffff;
+}
+
+
