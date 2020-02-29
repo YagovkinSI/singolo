@@ -89,7 +89,7 @@ p {
 	margin-right: 7px;
 }
 
-.tags-link_active {
+.tags-link_active, .tags-link:hover {
 	color: #dedede;
 	border: 1px solid #dedede;
 }
@@ -213,6 +213,11 @@ p {
 	position: absolute;
 	top: 9px;
 	left: 9px;
+}
+
+.mes-ico-ellipse:hover, .mes-ico:hover {
+	cursor: pointer;
+	opacity: 0.5;
 }
 
 .mes-ico__facebook {
