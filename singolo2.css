@@ -32,9 +32,24 @@ html {
 h2 {
 	font-size: 3rem;
 	font-weight: 900;
+	color: #666d89;
+	letter-spacing: 0.4px;
 	margin: 0;
 	padding-top: 60px;
 	padding-bottom: 18px;
+}
+
+p {
+	font-size: 1.2rem;
+	font-weight: normal;
+	text-align: justify;
+	font-size: 1.8rem;
+	font-weight: 300;
+	padding-bottom: 10px;
+	margin: 0;
+	line-height: 1.7;
+	letter-spacing: -0.2px;
+	color: #767e9e;
 }
 
 h4 {
@@ -52,16 +67,109 @@ h4 {
 	height: 6px;
 }
 
-.tags-li{
+.tags-li {
 	display: inline-block;
+	padding: 5px 0px;
 }
 
 .tags-link {
 	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: normal;
+	color: #767e9e;
+	padding: 2.5px 6.5px;
+	border: 1.2px solid #767e9e;
+	border-radius: 5px;
+	margin-right: 7px;
 }
 
 .portfolio {
 	background-color: #2d303a;
+}
+
+.portfolio-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 0px 20px;
+	padding: 7px 0px 57px;
+}
+
+.portfolio-img{
+	margin: 10px 0px;
+	height: 187px;
+	width: 220px;
+}
+
+.portfolio-img__1 {
+	background-image: url(assets/arts/p01.png);
+	background-position-x: -8px;
+	background-position-y: -11px;
+}
+
+.portfolio-img__2 {
+	background-image: url(assets/arts/p02.png);
+	background-position-x: -82px;
+	background-position-y: -43px;
+}
+
+.portfolio-img__3 {
+	background-image: url(assets/arts/p03.png);
+	background-position-x: -11px;
+	background-position-y: -1px;
+}
+
+.portfolio-img__4 {
+	background-image: url(assets/arts/p04.png);
+	background-position-x: -24px;
+	background-position-y: -2px;
+}
+
+.portfolio-img__5 {
+	background-image: url(assets/arts/p05.png);
+	background-position-x: -10px;
+	background-position-y: -16px;
+}
+
+.portfolio-img__6 {
+	background-image: url(assets/arts/p06.png);
+	background-position-x: -16px;
+	background-position-y: -4px;
+}
+
+.portfolio-img__7 {
+	background-image: url(assets/arts/p07.png);
+	background-position-x: -31px;
+	background-position-y: -39px;
+}
+
+.portfolio-img__8 {
+	background-image: url(assets/arts/p08.png);
+	background-position-x: -24px;
+	background-position-y: -32px;
+}
+
+.portfolio-img__9 {
+	background-image: url(assets/arts/p09.png);
+	background-position-x: -16px;
+	background-position-y: -2px;
+}
+
+.portfolio-img__10 {
+	background-image: url(assets/arts/p10.png);
+	background-position-x: -141px;
+	background-position-y: -113px;
+}
+
+.portfolio-img__11 {
+	background-image: url(assets/arts/p11.png);
+	background-position-x: -144px;
+	background-position-y: -175px;
+}
+
+.portfolio-img__12 {
+	background-image: url(assets/arts/p12.png);
+	background-position-x: -36px;
+	background-position-y: -60px;
 }
 
 .splitter_portfolio {
