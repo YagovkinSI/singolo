@@ -39,9 +39,15 @@ h2 {
 	padding-bottom: 18px;
 }
 
+h4 {
+	font-size: 1.8rem;
+	font-weight: 900;
+	color: #666d89;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+
 p {
-	font-size: 1.2rem;
-	font-weight: normal;
 	text-align: justify;
 	font-size: 1.8rem;
 	font-weight: 300;
@@ -52,9 +58,9 @@ p {
 	color: #767e9e;
 }
 
-h4 {
-	font-size: 1.8rem;
-	font-weight: 900;
+.about-person-rapagraph {
+	font-size: 1.2rem;
+	font-weight: normal;
 }
 
 .wrapper {
@@ -78,9 +84,14 @@ h4 {
 	font-weight: normal;
 	color: #767e9e;
 	padding: 2.5px 6.5px;
-	border: 1.2px solid #767e9e;
+	border: 1px solid #767e9e;
 	border-radius: 5px;
 	margin-right: 7px;
+}
+
+.tags-link_active {
+	color: #dedede;
+	border: 1px solid #dedede;
 }
 
 .portfolio {
@@ -179,6 +190,48 @@ h4 {
 .about-us {
 	background-color: #f2f2f2;
 }
+
+.about-us-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0px 17px;
+	padding: 34px 0px 0;
+}
+
+.mes-ico-ellipse {
+	background-image: url(assets/social-ico/Ellipse.png);
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	position: relative;
+	margin: 15px 6px 64px 0px;
+}
+
+.mes-ico {
+	height: 14px;
+	width: 14px;
+	position: absolute;
+	top: 9px;
+	left: 9px;
+}
+
+.mes-ico__facebook {
+	background-image: url(assets/social-ico/facbook.png);
+}
+
+.mes-ico__g-plus {
+	background-image: url(assets/social-ico/g_plus.png);
+}
+
+.mes-ico__tweeter {
+	background-image: url(assets/social-ico/twitter.png);
+}
+
+.mes-ico__linked-in {
+	background-image: url(assets/social-ico/linkedin.png);
+}
+
+
 
 .splitter_about-us {
 	background-color: #ffffff;
