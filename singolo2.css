@@ -75,34 +75,43 @@ p {
 
 .tags-li {
 	display: inline-block;
-	padding: 5px 0px;
+	margin: 1px 0 2px;
+	height: 20px;
+	border-radius: 5px;
+	border: 1px solid #767e9e;
+	margin-right: 6px;
+	color: #767e9e;
+	padding: 0 7px 0;
+}
+
+.tags-li_active, .tags-li:hover {
+	border: 1px solid #dedede;
+	color: #dedede;
 }
 
 .tags-link {
+	color: inherit;
 	text-decoration: none;
 	font-size: 1.2rem;
+	line-height: 22px;
 	font-weight: normal;
-	color: #767e9e;
-	padding: 2.5px 6.5px;
-	border: 1px solid #767e9e;
-	border-radius: 5px;
-	margin-right: 7px;
-}
-
-.tags-link_active, .tags-link:hover {
-	color: #dedede;
-	border: 1px solid #dedede;
 }
 
 .portfolio {
 	background-color: #2d303a;
 }
 
+.portfolio-zone {
+	padding: 7px 0px 57px;
+}
+
 .portfolio-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-auto-rows: 0;
+	overflow-y: hidden;
 	grid-gap: 0px 20px;
-	padding: 7px 0px 57px;
 }
 
 .portfolio-img{
@@ -194,8 +203,38 @@ p {
 .about-us-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 0px 17px;
+	grid-gap: 0px 20px;
 	padding: 34px 0px 0;
+}
+
+.face {
+	height: 299px;
+	padding-bottom: 1px;
+	margin-bottom: 4px;
+}
+
+.face__1 {
+	background-image: url(assets/faces/f1.png);
+}
+
+.face__2 {
+	background-image: url(assets/faces/f2.png);
+}
+
+.face__3 {
+	background-image: url(assets/faces/f3.png);
+}
+
+.about-person h4 {
+	height: 16px;
+	margin-bottom: 6px;
+	overflow-y: hidden;
+}
+
+.about-person p {
+	height: 34px;
+	margin-bottom: 6px;
+	overflow-y: hidden;
 }
 
 .mes-ico-ellipse {
@@ -235,8 +274,6 @@ p {
 .mes-ico__linked-in {
 	background-image: url(assets/social-ico/linkedin.png);
 }
-
-
 
 .splitter_about-us {
 	background-color: #ffffff;
