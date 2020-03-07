@@ -17,31 +17,42 @@
 				</p>
 			</div>
 			<div class="get-a-quote__grid">
-				<form action="get-a-quote" method="POST">
+				<form class="get-a-quote__form" action="get-a-quote" method="POST">
 					<p>
-						<input class="input input_line" type="text" name="answer" placeholder="a1">
+						<input class="input input_line" type="text" name="answer" placeholder="Name (Required)">
 					</p>
 					<p>
-						<input class="input input_line" type="email" name="answer" placeholder="a2">
+						<input class="input input_line" type="email" name="answer" placeholder="Email (Required)">
 					</p>
 					<p>
-						<input class="input input_line" type="text" name="answer" placeholder="a3">
+						<input class="input input_line" type="text" name="answer" placeholder="Subject">
 					</p>
 					<p>
-						<textarea class="input" name="answer" cols="20" rows="15"></textarea>
+						<textarea class="input textarea" name="answer" cols="20" rows="15" placeholder="Describe your project in detail..."></textarea>
 					</p>
-					<div class="input get-a-quote__button">
-						<button type="submit" class="button">Отправить</button>
+					<div class="get-a-quote__button">
+						<button type="submit" class="input button">Submit</button>
 					</div>
 				</form>
 				<div class="get-a-quote__info">
 					<h4>Contact Information</h4>
-					<p>
+					<p class="get-a-quote__info__text">
 						Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
 					</p>
-					<p><a href="#">Elm St. 14/05 Lost City</a></p>
-					<p><a href="tel:03528 331 86 35">03528 331 86 35 </a></p>
-					<p><a href="mailto:info@singolo.com">info@singolo.com</a></p>
+					<div class="contacts">
+						<div class="contact">
+							<div class="get-a-quote__ico get-a-quote__ico__location"></div>
+							<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="#">Elm St. 14/05 Lost City</a></p>
+						</div>
+						<div class="contact">
+							<div class="get-a-quote__ico get-a-quote__ico__phone"></div>
+							<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="tel:03528 331 86 35">03528 331 86 35 </a></p>
+						</div>
+						<div class="contact">
+							<div class="get-a-quote__ico get-a-quote__ico__mail"></div>
+							<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="mailto:info@singolo.com">info@singolo.com</a></p>
+						</div>
+					</div>					
 				</div>
 			</div>
 			
@@ -50,21 +61,23 @@
 	<div class="splitter splitter_get-a-quote"></div>
 	<footer>  		
 		<div class="wrapper">
-			<p class="footer__text">© Copyright 2013</p>
-			<div class="soc_icos">
-				<div class="mes-ico-ellipse">
-					<div class="mes-ico mes-ico__facebook"></div>
+			<div class="footer_line">
+				<p class="footer__text">© Copyright 2013</p>
+				<div class="soc_icos">
+					<div class="mes-ico-ellipse">
+						<div class="mes-ico mes-ico__facebook"></div>
+					</div>
+					<div class="mes-ico-ellipse">
+						<div class="mes-ico mes-ico__g-plus"></div>
+					</div>
+					<div class="mes-ico-ellipse">
+						<div class="mes-ico mes-ico__tweeter"></div>
+					</div>
+					<div class="mes-ico-ellipse">
+						<div class="mes-ico mes-ico__linked-in"></div>
+					</div>
 				</div>
-				<div class="mes-ico-ellipse">
-					<div class="mes-ico mes-ico__g-plus"></div>
-				</div>
-				<div class="mes-ico-ellipse">
-					<div class="mes-ico mes-ico__tweeter"></div>
-				</div>
-				<div class="mes-ico-ellipse">
-					<div class="mes-ico mes-ico__linked-in"></div>
-				</div>
-			</div>
+			</div>			
 		</div>
 	</footer>
 </body>
