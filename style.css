@@ -1,27 +1,22 @@
 @font-face {
 	font-family: "Lato";
-	src: url(assets/Lato-Black.ttf) format("truetype");
+	src: url(assets/fonts/Lato-Black.ttf) format("truetype");
 	font-weight: 900;
 }
 @font-face {
 	font-family: "Lato";
-	src: url(assets/Lato-Bold.ttf) format("truetype");
+	src: url(assets/fonts/Lato-Bold.ttf) format("truetype");
 	font-weight: bold;
 }
 @font-face {
 	font-family: "Lato";
-	src: url(assets/Lato-Light.ttf) format("truetype");
+	src: url(assets/fonts/Lato-Light.ttf) format("truetype");
 	font-weight: 300;
 }
 @font-face {
 	font-family: "Lato";
-	src: url(assets/Lato-Regular.ttf) format("truetype");
+	src: url(assets/fonts/Lato-Regular.ttf) format("truetype");
 	font-weight: normal;
-}
-
-* {
-	margin: 0;
-	padding: 0;
 }
 
 html {
@@ -206,7 +201,7 @@ p {
 
 .phone_content_1 {
 	position: absolute;
-	background-image: url(assets/first_phone_content.png);
+	background-image: url(assets/slider/first_phone_content.png);
 	background-position-x: -14px;
 	background-position-y: -135px;
 	width: 188px;
@@ -226,7 +221,7 @@ p {
 
 .phone_content_2 {
 	position: absolute;
-	background-image: url(assets/second_phone_content.png);
+	background-image: url(assets/slider/second_phone_content.png);
 	background-position-x: -125px;
 	background-position-y: -119px;
 	width: 333px;
