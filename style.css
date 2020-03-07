@@ -31,7 +31,6 @@ h1 {
 h2 {
 	font-size: 3rem;
 	font-weight: 900;
-	margin: 0;
 	padding-top: 60px;
 	padding-bottom: 18px;
 }
@@ -47,7 +46,7 @@ p {
 	text-align: justify;
 }
 
-.services-header-paragraph {
+.services-header-paragraph, .porfolio-paragraph {
 	font-size: 1.8rem;
 	font-weight: 300;
 	padding-bottom: 43px;
@@ -83,27 +82,27 @@ p {
 	display: inline-block;
 }
 
-.logo__color_1 {
+.logo_color-1 {
 	color: #ffffff;
 }
 
-.logo__color_2 {
+.logo_color-2 {
 	color: #f06c64;
 }
 
-.header-nav {
+.nav {
 	display: inline-block;
 	float: right;
 }
 
-.nav-li {
+.nav_li {
 	display: inline-block;
 	text-transform: uppercase;
 	margin-left: 10px;
 	margin-top: 14px;
 }
 
-.nav-point {
+.nav_point {
 	display: inline-block;
 	font-size: 1.2rem;
 	font-weight: bold;
@@ -306,10 +305,10 @@ p {
 	padding: 0 7px 0;
 }
 
-	.tags-li_active, .tags-li:hover {
-		border: 1px solid #dedede;
-		color: #dedede;
-	}
+.tags-li_active, .tags-li:hover {
+	border: 1px solid #dedede;
+	color: #dedede;
+}
 
 .tags-link {
 	color: inherit;
@@ -448,7 +447,6 @@ p {
 }
 
 .about-person {
-	height: 16px;
 	margin-bottom: 6px;
 	overflow-y: hidden;
 }
@@ -552,20 +550,20 @@ p {
 	resize: none;
 }
 
-	.input::placeholder {
-		color: #f48c8f;
-		font-size: 1.2rem;
-		letter-spacing: -0.5px;
-		text-align: justify;
-		font-weight: 300;
-		line-height: 38px;
-	}
+.input::placeholder {
+	color: #f48c8f;
+	font-size: 1.2rem;
+	letter-spacing: -0.5px;
+	text-align: justify;
+	font-weight: 300;
+	line-height: 38px;
+}
 
 .input_line {
 	height: 38px;
 }
 
-textarea {
+.textarea {
 	height: 203px;
 }
 
@@ -585,11 +583,11 @@ textarea {
 	background-color: #d6564f;
 }
 
-	.button:hover {
-		cursor: pointer;
-		opacity: 0.5;
-		border: 1px solid #f0d8d9;
-	}
+.button:hover {
+	cursor: pointer;
+	opacity: 0.5;
+	border: 1px solid #f0d8d9;
+}
 
 .get-a-quote__ico {
 	display: inline-block;
@@ -630,42 +628,4 @@ footer {
 .soc_icos {
 	display: inline-block;
 	float: right;
-}
-
-.mes-ico-ellipse {
-	background-image: url(assets/social-ico/Ellipse.png);
-	display: inline-block;
-	height: 32px;
-	width: 32px;
-	position: relative;
-	margin: 21px 0px 23px 5px;
-}
-
-.mes-ico {
-	height: 14px;
-	width: 14px;
-	position: absolute;
-	top: 9px;
-	left: 9px;
-}
-
-.mes-ico-ellipse:hover, .mes-ico:hover {
-	cursor: pointer;
-	opacity: 0.5;
-}
-
-.mes-ico__facebook {
-	background-image: url(assets/social-ico/facbook.png);
-}
-
-.mes-ico__g-plus {
-	background-image: url(assets/social-ico/g_plus.png);
-}
-
-.mes-ico__tweeter {
-	background-image: url(assets/social-ico/twitter.png);
-}
-
-.mes-ico__linked-in {
-	background-image: url(assets/social-ico/linkedin.png);
 }
