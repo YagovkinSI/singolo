@@ -70,8 +70,8 @@ p {
 
 .header {
 	background-color: #2d303a;
-	padding-top: 28px; 
-	padding-bottom: 31px; 
+	padding-top: 28px;
+	padding-bottom: 31px;
 }
 
 .logo {	
@@ -91,7 +91,7 @@ p {
 	color: #f06c64;
 }
 
-.header-nav{
+.header-nav {
 	display: inline-block;
 	float: right;
 }
@@ -447,7 +447,7 @@ p {
 	background-image: url(assets/faces/f3.png);
 }
 
-.about-person h4 {
+.about-person {
 	height: 16px;
 	margin-bottom: 6px;
 	overflow-y: hidden;
