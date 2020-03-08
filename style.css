@@ -46,19 +46,11 @@ p {
 	text-align: justify;
 }
 
-.services-header-paragraph, .porfolio-paragraph {
+.main-text {
 	font-size: 1.8rem;
 	font-weight: 300;
-	padding-bottom: 43px;
-	margin: 0;
 	line-height: 1.7;
-}
-
-.service-paragraph {
-	height: 80px;
-	padding-top: 8px;
-	line-height: 1.8;
-	overflow: hidden;
+	letter-spacing: -0.2px;
 }
 
 .wrapper {
@@ -71,15 +63,16 @@ p {
 	background-color: #2d303a;
 	padding-top: 28px;
 	padding-bottom: 31px;
+	color: #ffffff;
 }
 
-.logo {	
+.logo {
 	display: inline-block;
 	font-size: 2.5rem;
-	font-weight: bold; 
+	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
-	display: inline-block;
+	letter-spacing: -0.7px;
 }
 
 .logo_color-1 {
@@ -95,38 +88,31 @@ p {
 	float: right;
 }
 
-.nav_li {
+.nav__li {
 	display: inline-block;
 	text-transform: uppercase;
-	margin-left: 10px;
-	margin-top: 14px;
-}
-
-.nav_point {
-	display: inline-block;
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: #c7c8ca;
-	text-decoration: none;
-	margin-left: 10px;
-	user-select: none;
+	letter-spacing: -0.3px;
+	margin: 14.5px 0px 0px 11.3px;
 }
 
-.nav-link {
-	font-size: 1.2rem;
-	font-weight: bold;
-	color: #c7c8ca;
+.nav__link {
 	text-decoration: none;
-	cursor: pointer;
+	color: #ffffff;
 }
 
-.nav-link:hover {
+.nav__point {
+	color: #494e62;
+}
+
+.nav__link:hover {
 	text-decoration: underline;
 	color: #f06c64;
 }
 
-.nav-link_active {
-	color: #f06c64;	
+.nav__link_active {
+	color: #f06c64;
 }
 
 .splitter {
@@ -146,6 +132,7 @@ p {
 	padding-top: 280px;
 	height: 26px;
 	cursor: pointer;
+	padding: 282px 0px 0 1px;
 }
 
 .chev:hover {
@@ -249,10 +236,22 @@ p {
 	grid-gap: 30px 20px;
 }
 
+.service-paragraph {
+	height: 80px;
+	padding-top: 8px;
+	line-height: 1.8;
+	overflow: hidden;
+}
+
 .service {
 	display: grid;
 	grid-template-columns: 1fr 3fr; 
 	height: 95px;
+}
+
+.services-header-paragraph {
+	padding-bottom: 43px;
+	margin: 0;
 }
 
 .ico {
@@ -320,6 +319,7 @@ p {
 
 .portfolio {
 	background-color: #2d303a;
+	color: #767e9e;
 }
 
 .portfolio-zone {
@@ -333,6 +333,11 @@ p {
 	grid-auto-rows: 0;
 	overflow-y: hidden;
 	grid-gap: 0px 20px;
+}
+
+.porfolio-paragraph {
+	padding-bottom: 9px;
+	margin: 0;
 }
 
 .portfolio-img {
@@ -419,19 +424,20 @@ p {
 
 .about-us {
 	background-color: #f2f2f2;
+	color: #767e9e;
 }
 
 .about-us-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 0px 20px;
-	padding: 34px 0px 0;
+	padding: 44px 0px 0;
 }
 
 .face {
 	height: 299px;
 	padding-bottom: 1px;
-	margin-bottom: 4px;
+	margin-bottom: 15px;
 }
 
 .face__1 {
@@ -453,8 +459,9 @@ p {
 
 .about-person p {
 	height: 34px;
-	margin-bottom: 6px;
+	margin: 10px 0 15px 0;
 	overflow-y: hidden;
+	line-height: 20px;
 }
 
 .mes-ico-ellipse {
@@ -463,7 +470,10 @@ p {
 	height: 32px;
 	width: 32px;
 	position: relative;
-	margin: 15px 6px 64px 0px;
+}
+
+.about-us__mes {
+	margin: 16px 6px 58px 0px
 }
 
 .mes-ico {
@@ -501,6 +511,7 @@ p {
 
 .get-a-quote {
 	background-color: #f06c64;
+	color: #f0d8d9;
 }
 
 .splitter_get-a-quote {
@@ -518,11 +529,16 @@ p {
 	padding-top: 13px;
 }
 
+.get-a-quote__info {
+	padding: 11px 0 0 2.5px;
+}
+
 .get-a-quote__info__text {
 	display: inline-block;
 	font-size: 1.2rem;
 	font-weight: normal;
 	line-height: 21px;
+	padding-top: 9px;
 }
 
 .contacts {
@@ -531,6 +547,7 @@ p {
 }
 
 .get-a-quote__info__contact {
+	padding-top: 0px;
 }
 
 .get-a-quote__info__text a {
@@ -553,7 +570,6 @@ p {
 .input::placeholder {
 	color: #f48c8f;
 	font-size: 1.2rem;
-	letter-spacing: -0.5px;
 	text-align: justify;
 	font-weight: 300;
 	line-height: 38px;
@@ -567,12 +583,8 @@ p {
 	height: 203px;
 }
 
-.textarea::placeholder {
-	letter-spacing: -1.5px;
-}
-
 .get-a-quote__button {
-	margin-bottom: 5px;
+	margin-bottom: 10px
 }
 
 .button {
@@ -592,7 +604,7 @@ p {
 .get-a-quote__ico {
 	display: inline-block;
 	width: 20px;
-	height: 14px;
+	height: 10px;
 	background-repeat: no-repeat;
 }
 
@@ -608,10 +620,6 @@ p {
 	background-image: url(assets/contact_ico/mail.png);
 }
 
-.get-a-quote__info {
-	padding-left: 4px;
-}
-
 footer {
 	background-color: #2d303a;
 	height: 76px;
@@ -622,10 +630,14 @@ footer {
 	font-size: 1.2rem;
 	display: inline-block;
 	float: left;
-	padding-top: 28px;
+	padding-top: 30px;
 }
 
 .soc_icos {
 	display: inline-block;
 	float: right;
+}
+
+.footer_mes {
+	margin: 22px 0px 0 5px;
 }
