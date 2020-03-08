@@ -22,6 +22,7 @@
 html {
 	font-size: 10px;
 	font-family: "Lato", sans-serif;
+	text-align: justify;
 }
 
 h1 {
@@ -41,12 +42,6 @@ h4 {
 }
 
 p {
-	font-size: 1.2rem;
-	font-weight: normal;
-	text-align: justify;
-}
-
-.main-text {
 	font-size: 1.8rem;
 	font-weight: 300;
 	line-height: 1.7;
@@ -102,10 +97,6 @@ p {
 	color: #ffffff;
 }
 
-.nav__point {
-	color: #494e62;
-}
-
 .nav__link:hover {
 	text-decoration: underline;
 	color: #f06c64;
@@ -113,6 +104,10 @@ p {
 
 .nav__link_active {
 	color: #f06c64;
+}
+
+.nav__point {
+	color: #494e62;
 }
 
 .splitter {
@@ -129,7 +124,6 @@ p {
 }
 
 .chev {
-	padding-top: 280px;
 	height: 26px;
 	cursor: pointer;
 	padding: 282px 0px 0 1px;
@@ -227,16 +221,18 @@ p {
 }
 
 .services {
-	padding-bottom: 57px;
+	padding-bottom: 59px;
 }
 
 .services-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 30px 20px;
+	grid-gap: 28px 19px;
 }
 
 .service-paragraph {
+	font-size: 1.2rem;
+	font-weight: normal;
 	height: 80px;
 	padding-top: 8px;
 	line-height: 1.8;
@@ -271,7 +267,7 @@ p {
 }
 
 .service-text {
-	padding-left: 5px; 
+	padding-left: 5px;
 }
 
 .splitter_main {
@@ -514,10 +510,6 @@ p {
 	color: #f0d8d9;
 }
 
-.splitter_get-a-quote {
-	background-color: #ea676b;
-}
-
 .get-a-quote__grid {
 	display: grid;
 	grid-gap: 33px;
@@ -559,37 +551,33 @@ p {
 
 .input {
 	width: 97.5%;
-	margin-bottom: 16px;
-	padding: 0 15px;
+	margin-bottom: 15px;
+	padding: 11px 15px;
 	background-color: #d6564f;
 	border: none;
 	border-radius: 5px;
 	resize: none;
+	color: #f0d8d9;
+	font-size: 1.4rem;
+	text-align: justify;
+	font-weight: 300;
+}
+
+.textarea {
+	height: 180px;
 }
 
 .input::placeholder {
 	color: #f48c8f;
 	font-size: 1.2rem;
-	text-align: justify;
-	font-weight: 300;
-	line-height: 38px;
-}
-
-.input_line {
-	height: 38px;
-}
-
-.textarea {
-	height: 203px;
 }
 
 .get-a-quote__button {
-	margin-bottom: 10px
+	margin-bottom: 10px;
 }
 
 .button {
 	color: #f0d8d9;
-	height: 21px;
 	width: 80px;
 	border: 1px solid #d6564f;
 	background-color: #d6564f;
@@ -620,6 +608,10 @@ p {
 	background-image: url(assets/contact_ico/mail.png);
 }
 
+.splitter_get-a-quote {
+	background-color: #ea676b;
+}
+
 footer {
 	background-color: #2d303a;
 	height: 76px;
@@ -630,7 +622,7 @@ footer {
 	font-size: 1.2rem;
 	display: inline-block;
 	float: left;
-	padding-top: 30px;
+	padding: 28px 0 0 2px;
 }
 
 .soc_icos {
