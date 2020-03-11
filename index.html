@@ -9,29 +9,29 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header" id="home">
 		<div class="wrapper">
 			<h1 class="logo logo_color-1">Singolo</h1><span class="logo logo_color-2">*</span>
 			<nav class="nav">
-				<ul>
+				<ul id="nav__ul">
 					<li class="nav__li">
-						<a href="#" class="nav__link nav__link_active">Home</a>
+						<a href="#home" class="nav__link nav__link_active">Home</a>
 					</li>
 					<li class="nav__li nav__point">·</li>
 					<li class="nav__li">
-						<a href="#" class="nav__link">Services</a>
+						<a href="#services" class="nav__link">Services</a>
 					</li>
 					<li class="nav__li nav__point">·</li>
 					<li class="nav__li">
-						<a href="#" class="nav__link">Portfolio</a>
+						<a href="#portfolio" class="nav__link">Portfolio</a>
 					</li>
 					<li class="nav__li nav__point">·</li>
 					<li class="nav__li">
-						<a href="#" class="nav__link">About</a>
+						<a href="#about" class="nav__link">About</a>
 					</li>
 					<li class="nav__li nav__point">·</li>
 					<li class="nav__li">
-						<a href="#" class="nav__link">Contact</a>
+						<a href="#contact" class="nav__link">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -57,7 +57,7 @@
 		</div>
 	</div>
 	<div class="splitter splitter_slider"></div>
-	<main class="our-services-block">
+	<main class="our-services-block" id="services">
 		<div class="wrapper">
 			<article class="services">
 				<h2>Our Services</h2>
@@ -140,7 +140,7 @@
 		</div>
 	</main>
 	<div class="splitter splitter_main"></div>
-	<div class="portfolio">
+	<div class="portfolio" id="portfolio">
 		<div class="wrapper">
 			<h2>Portfolio</h2>
 			<p class="porfolio-paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -177,7 +177,7 @@
 		</div>
 	</div>
 	<div class="splitter splitter_portfolio"></div>
-	<div class="about-us">
+	<div class="about-us" id="about">
 		<div class="wrapper">
 			<h2>About Us</h2>
 			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -237,7 +237,7 @@
 		</div>
 	</div>
 	<div class="splitter splitter_about-us"></div>
-	<div class="get-a-quote">
+	<div class="get-a-quote" id="contact">
 		<div class="wrapper">
 			<div>
 				<h2>Get a Quote</h2>
@@ -299,5 +299,7 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="script.js"></script>
 </body>
 </html>
