@@ -180,13 +180,14 @@ p {
 	position: absolute;
 	height: 215px;
 	z-index: 20;
+	cursor: pointer;
 }
 
-.phone__vertical {
+#phone__vertical {
 	transform: rotate(270deg);
 }
 
-.phone_content_1 {
+#phone_content_1 {
 	position: absolute;
 	background-image: url(assets/slider/first_phone_content.png);
 	background-position-x: -14px;
@@ -202,11 +203,11 @@ p {
 	position: absolute;
 }
 
-.phone__horizontal {
+#phone__horizontal {
 	position: absolute;
 }
 
-.phone_content_2 {
+#phone_content_2 {
 	position: absolute;
 	background-image: url(assets/slider/second_phone_content.png);
 	background-position-x: -125px;
@@ -644,4 +645,8 @@ footer {
 
 .footer_mes {
 	margin: 22px 0px 0 5px;
+}
+
+.invisible {
+	opacity: 0;
 }
