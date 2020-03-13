@@ -1,10 +1,12 @@
 const nav = document.getElementById("nav__ul");
 const anchors = document.querySelectorAll('a[href*="#"]')
 
-var phone_1 = document.getElementById("phone__vertical"); 
-var phone_2 = document.getElementById("phone__horizontal");
-var phone_content_1 = document.getElementById("phone_content_1");
-var phone_content_2 = document.getElementById("phone_content_2");
+const phone_1 = document.getElementById("phone__vertical"); 
+const phone_2 = document.getElementById("phone__horizontal");
+const phone_content_1 = document.getElementById("phone_content_1");
+const phone_content_2 = document.getElementById("phone_content_2");
+
+const portfolio_images = document.getElementsByClassName("portfolio-img");
 
 
 nav.addEventListener("click", (event) => {
@@ -12,16 +14,27 @@ nav.addEventListener("click", (event) => {
     event.target.classList.add("nav__link_active");
 });
 
-phone_1.addEventListener("click", () => { changePhoneContentVisible(phone_content_1) });
-phone_content_1.addEventListener("click", () => { changePhoneContentVisible(phone_content_1) });
-phone_2.addEventListener("click", () => { changePhoneContentVisible(phone_content_2) });
-phone_content_2.addEventListener("click", () => { changePhoneContentVisible(phone_content_2) });
-function changePhoneContentVisible(content) {
-    if (content.classList.contains("invisible")) {
-        content.classList.remove("invisible")
+phone_1.addEventListener("click", () => { changeElementVisible(phone_content_1) });
+phone_content_1.addEventListener("click", () => { changeElementVisible(phone_content_1) });
+phone_2.addEventListener("click", () => { changeElementVisible(phone_content_2) });
+phone_content_2.addEventListener("click", () => { changeElementVisible(phone_content_2) });
+
+for (var i = 0; i < portfolio_images.length; i++) {
+    portfolio_images[i].addEventListener("click", (event) => {
+        for (var i = 0; i < portfolio_images.length; i++)
+            portfolio_images[i].classList.remove("portfolio-img_active");
+        event.target.classList.add("portfolio-img_active");
+    });
+}
+
+function changeElementVisible(element) {
+    if (element.classList.contains("invisible")) {
+        element.classList.remove("invisible")
     }
     else {
-        content.classList.add("invisible")
+        element.classList.add("invisible")
     }
 }
+
+
 
