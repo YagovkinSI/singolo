@@ -6,15 +6,29 @@ const phone_2 = document.getElementById("phone__horizontal");
 const phone_content_1 = document.getElementById("phone_content_1");
 const phone_content_2 = document.getElementById("phone_content_2");
 
+const tag_ul = document.getElementById("tags-ul");
+const portfolio_grid = document.getElementById("portfolio-grid");
+
 const portfolio_images = document.getElementsByClassName("portfolio-img");
 
 const btn_send = document.getElementById("btn_send");
 const message_ok = document.getElementById("message-ok");
 
-
-nav.addEventListener("click", (event) => {
+nav.addEventListener("click", (event) => {   
     nav.querySelectorAll("a").forEach(li => li.classList.remove("nav__link_active"));
     event.target.classList.add("nav__link_active");
+});
+
+tag_ul.addEventListener("click", (event) => {
+    var li = event.target.classList.contains("tags-li")
+        ? event.target
+        : event.target.parentNode;
+    if (!li.classList.contains("tags-li"))
+        return;
+    tag_ul.querySelectorAll("li").forEach(li => li.classList.remove("tags-li_active"));
+    li.classList.add("tags-li_active");
+    var array = portfolio_grid.querySelectorAll("div");
+    portfolio_grid.append(array[0]);
 });
 
 phone_1.addEventListener("click", () => { changeElementVisible(phone_content_1) });
