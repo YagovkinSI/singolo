@@ -656,6 +656,27 @@ footer {
 	margin: 22px 0px 0 5px;
 }
 
+#message-block {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.message {
+	position: absolute;
+	min-width: 470px;
+	padding: 10px 10px;
+	top: 25%;
+	left: 25%;
+	background-color: #f06c64;
+	color: #f0d8d9;
+	border: 2px solid #f0d8d9;
+	border-radius: 5px;
+	text-align: left;
+}
+
 .invisible {
-	opacity: 0;
+	display: none;
 }
