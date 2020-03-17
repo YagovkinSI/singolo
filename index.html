@@ -1,63 +1,66 @@
 ﻿<!doctype html>
 
-<html>
+<html lang="ru_RU">
 <head>
-  	<meta charset="utf-8">
-  	<title>Singolo</title>
+	<meta charset="utf-8" />
+	<title>Singolo</title>
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-  	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<header class="header">
+	<header class="header" id="home">
 		<div class="wrapper">
 			<h1 class="logo logo_color-1">Singolo</h1><span class="logo logo_color-2">*</span>
 			<nav class="nav">
-				<ul>
+				<ul id="nav__ul">
 					<li class="nav__li">
-						<a href="#" class="nav__link nav__link_active">Home</a>
+						<a href="#home" class="nav__link nav__link_active">Home</a>
 					</li>
 					<li class="nav__li nav__point">·</li>
 					<li class="nav__li">
-						<a href="#" class="nav__link">Services</a>
+						<a href="#services" class="nav__link">Services</a>
 					</li>
 					<li class="nav__li nav__point">·</li>
 					<li class="nav__li">
-						<a href="#" class="nav__link">Portfolio</a>
+						<a href="#portfolio" class="nav__link">Portfolio</a>
 					</li>
 					<li class="nav__li nav__point">·</li>
 					<li class="nav__li">
-						<a href="#" class="nav__link">About</a>
+						<a href="#about" class="nav__link">About</a>
 					</li>
 					<li class="nav__li nav__point">·</li>
 					<li class="nav__li">
-						<a href="#" class="nav__link">Contact</a>
+						<a href="#contact" class="nav__link">Contact</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	<div class="splitter splitter_header"></div>
-	<div class="slider-block">
+	<div id="slider-block" class="slider-block__color-1">
 		<div class="wrapper">
-			<img src="assets/slider/chev.png" alt="arrow" class="chev chev__left" />
-			<div class="slider">
+			<img src="assets/slider/chev.png" alt="arrow" class="chev" id="chev__left" />
+			<div id="silder_1" class="slider">
 				<div class="phone_1">
 					<img src="assets/slider/shadow.png" alt="shadow__vertical" class="shadow shadow__vertical" />
-					<img src="assets/slider/phone.png" alt="phone__vertical" class="phone phone__vertical" />
-					<div class="phone_content_1"></div>
+					<img src="assets/slider/phone.png" alt="phone__vertical" class="phone" id="phone__vertical" />
+					<div id="phone_content_1"></div>
 				</div>
 				<div class="phone_2">
 					<img src="assets/slider/shadow.png" alt="shadow__horizontal" class="shadow shadow__horizontal" />
-					<img src="assets/slider/phone.png" alt="phone__horizontal" class="phone phone__horizontal" />
-					<div class="phone_content_2"></div>
+					<img src="assets/slider/phone.png" alt="phone__horizontal" class="phone" id="phone__horizontal" />
+					<div id="phone_content_2"></div>
 				</div>
 			</div>
-			<img src="assets/slider/chev.png" alt="arrow" class="chev chev__rigth" />
+			<div id="silder_2" class="slider invisible">
+				<img src="assets/slider/slider2.png" alt="slider2" class="slider_2_img" />
+			</div>
+			<img src="assets/slider/chev.png" alt="arrow" class="chev" id="chev__rigth" />
 		</div>
 	</div>
-	<div class="splitter splitter_slider"></div>
-	<main class="our-services-block">
+	<div id="splitter_slider" class="splitter splitter_slider__1"></div>
+	<main class="our-services-block" id="services">
 		<div class="wrapper">
 			<article class="services">
 				<h2>Our Services</h2>
@@ -140,26 +143,28 @@
 		</div>
 	</main>
 	<div class="splitter splitter_main"></div>
-	<div class="portfolio">
+	<div class="portfolio" id="portfolio">
 		<div class="wrapper">
 			<h2>Portfolio</h2>
 			<p class="porfolio-paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-			<ul class="tags-ul">
+			<ul id="tags-ul">
 				<li class="tags-li tags-li_active">
-					<a href="#" class="tags-link">All</a>
+					<a class="tags-link">All</a>
 				</li>
 				<li class="tags-li">
-					<a href="#" class="tags-link">Web Design</a>
+					<a class="tags-link">Web Design</a>
 				</li>
 				<li class="tags-li">
-					<a href="#" class="tags-link">Graphic Design</a>
+					<a class="tags-link">Graphic Design</a>
 				</li>
 				<li class="tags-li">
-					<a href="#" class="tags-link">Artwork</a>
+					<a class="tags-link">Artwork</a>
 				</li>
 			</ul>
+		</div>
+		<div class="wrapper_medium">
 			<div class="portfolio-zone">
-				<div class="portfolio-grid">
+				<div id="portfolio-grid">
 					<div class="portfolio-img portfolio-img__1"></div>
 					<div class="portfolio-img portfolio-img__2"></div>
 					<div class="portfolio-img portfolio-img__3"></div>
@@ -177,7 +182,7 @@
 		</div>
 	</div>
 	<div class="splitter splitter_portfolio"></div>
-	<div class="about-us">
+	<div class="about-us" id="about">
 		<div class="wrapper">
 			<h2>About Us</h2>
 			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -237,7 +242,7 @@
 		</div>
 	</div>
 	<div class="splitter splitter_about-us"></div>
-	<div class="get-a-quote">
+	<div class="get-a-quote" id="contact">
 		<div class="wrapper">
 			<div>
 				<h2>Get a Quote</h2>
@@ -247,11 +252,11 @@
 			</div>
 			<div class="get-a-quote__grid">
 				<form class="get-a-quote__form" action="get-a-quote" method="POST">
-					<input class="input" type="text" name="answer" placeholder="Name (Required)" required>
-					<input class="input" type="email" name="answer" placeholder="Email (Required)" required>
-					<input class="input" type="text" name="answer" placeholder="Subject">					
-					<textarea class="input textarea" name="answer" cols="20" rows="10" placeholder="Describe your project in detail..."></textarea>
-					<button type="submit" class="input button get-a-quote__button">Submit</button>
+					<input class="input" type="text" name="name" id="name" placeholder="Name (Required)" required>
+					<input class="input" type="email" name="email" id="email" placeholder="Email (Required)" required>
+					<input class="input" type="text" name="answer" id="subject" placeholder="Subject">
+					<textarea class="input textarea" name="answer" cols="20" rows="10" id="describe" placeholder="Describe your project in detail..."></textarea>
+					<button type="button" id="btn_send" class="input button get-a-quote__button">Send</button>
 				</form>
 				<div class="get-a-quote__info">
 					<h4>Contact Information</h4>
@@ -274,7 +279,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 	<div class="splitter splitter_get-a-quote"></div>
@@ -299,5 +303,20 @@
 			</div>
 		</div>
 	</footer>
+
+	<div id="message-block" class="invisible">
+		<div class="message">
+			<p>Письмо отправлено</p>
+			<p>
+				Тема: <span id="message-subject"></span>
+			</p>
+			<p>
+				Описание: <span id="message-describe"></span>
+			</p>
+			<button id="message-ok" class="input button">OK</button>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>
