@@ -131,9 +131,16 @@ p {
 	background-color: #323746;	
 }
 
-.slider-block {
-	height: 594px;
-	background-color: #f06c64;	
+#slider-block {
+	height: 594px;	
+}
+
+.slider-block__color-1 {
+	background-color: #f06c64;
+}
+
+.slider-block__color-2 {
+	background-color: #648BF0;
 }
 
 .chev {
@@ -146,11 +153,11 @@ p {
 	opacity: 0.5;
 }
 
-.chev__left {
+#chev__left {
 	float: left;
 }
 
-.chev__rigth {
+#chev__rigth {
 	float: right;
 	transform: scale(-1, 1);
 }
@@ -225,8 +232,22 @@ p {
 	z-index: 30;
 }
 
-.splitter_slider {
+.splitter_slider__1 {
 	background-color: #ea676b;	
+}
+
+.splitter_slider__2 {
+	background-color: #648cf0;
+}
+
+.silder_2{
+	position: relative;
+}
+
+.slider_2_img {
+	position: absolute;
+	top: 50px;
+	left: 220px;
 }
 
 .our-services-block {

@@ -1,5 +1,24 @@
 const nav = document.getElementById("nav__ul");
-const anchors = document.querySelectorAll('a[href*="#"]')
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+const arrow_left = document.getElementById("chev__left");
+const arrow_rigth = document.getElementById("chev__rigth");
+const slider_block = document.getElementById("slider-block");
+const splitter_slider = document.getElementById("splitter_slider");
+
+const slider1 = [
+    document.getElementById("silder_1"),
+    "slider-block__color-1",
+    "splitter_slider__1"
+];
+const slider2 = [
+    document.getElementById("silder_2"),
+    "slider-block__color-2",
+    "splitter_slider__2"
+
+];
+const sliders = [slider1, slider2];
+let active_slider = 0;
 
 const phone_1 = document.getElementById("phone__vertical"); 
 const phone_2 = document.getElementById("phone__horizontal");
@@ -18,6 +37,9 @@ nav.addEventListener("click", (event) => {
     nav.querySelectorAll("a").forEach(li => li.classList.remove("nav__link_active"));
     event.target.classList.add("nav__link_active");
 });
+
+arrow_left.addEventListener("click", () => { changeSlider(-1) });
+arrow_rigth.addEventListener("click", () => { changeSlider(1) });
 
 tag_ul.addEventListener("click", (event) => {
     var li = event.target.classList.contains("tags-li")
@@ -67,6 +89,25 @@ function changeElementVisible(element) {
     else {
         element.classList.add("invisible")
     }
+}
+
+function changeSlider(direction) {
+    active_slider = (active_slider + direction + sliders.length) % sliders.length;
+    for (var i = 0; i < sliders.length; i++) {
+        var slider = sliders[i];
+        if (i == active_slider) {
+            slider[0].classList.remove("invisible");
+            slider_block.classList.add(slider[1]);
+            splitter_slider.classList.add(slider[2]);
+        }            
+        else {
+            slider[0].classList.add("invisible");
+            slider_block.classList.remove(slider[1]);
+            splitter_slider.classList.remove(slider[2]);
+        }
+    }
+    
+
 }
 
 
