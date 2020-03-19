@@ -67,11 +67,13 @@ p {
 	padding: 0px 30px;
 }
 
-.header {
+.bg_header {
 	background-color: #2d303a;
-	padding-top: 28px;
-	padding-bottom: 31px;
 	color: #ffffff;
+}
+
+.header {
+	padding: 28px 0 31px;
 }
 
 .logo {
@@ -131,16 +133,20 @@ p {
 	background-color: #323746;	
 }
 
-#slider-block {
+#bg_slider {
 	height: 594px;	
 }
 
-.slider-block__color-1 {
+.bg_slider_1 {
 	background-color: #f06c64;
 }
 
-.slider-block__color-2 {
+.bg_slider_2 {
 	background-color: #648BF0;
+}
+
+.slider-block {
+	height: 594px;
 }
 
 .chev {
@@ -175,7 +181,7 @@ p {
 .phone_2 {
 	position: absolute;
 	top: 174px;
-	left: 385px;
+	left: 41%;
 }
 
 .shadow {
@@ -232,11 +238,11 @@ p {
 	z-index: 30;
 }
 
-.splitter_slider__1 {
+.splitter_slider_1 {
 	background-color: #ea676b;	
 }
 
-.splitter_slider__2 {
+.splitter_slider_2 {
 	background-color: #648cf0;
 }
 
@@ -250,7 +256,7 @@ p {
 	left: 220px;
 }
 
-.our-services-block {
+.bg_services {
 	background-color: #f2f2f2;
 	color: #666d89;
 }

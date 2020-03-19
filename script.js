@@ -3,18 +3,18 @@ const anchors = document.querySelectorAll('a[href*="#"]');
 
 const arrow_left = document.getElementById("chev__left");
 const arrow_rigth = document.getElementById("chev__rigth");
-const slider_block = document.getElementById("slider-block");
+const bg_slider = document.getElementById("bg_slider");
 const splitter_slider = document.getElementById("splitter_slider");
 
 const slider1 = [
     document.getElementById("silder_1"),
-    "slider-block__color-1",
-    "splitter_slider__1"
+    "bg_slider_1",
+    "splitter_slider_1"
 ];
 const slider2 = [
     document.getElementById("silder_2"),
-    "slider-block__color-2",
-    "splitter_slider__2"
+    "bg_slider_2",
+    "splitter_slider_2"
 
 ];
 const sliders = [slider1, slider2];
@@ -97,12 +97,12 @@ function changeSlider(direction) {
         var slider = sliders[i];
         if (i == active_slider) {
             slider[0].classList.remove("invisible");
-            slider_block.classList.add(slider[1]);
+            bg_slider.classList.add(slider[1]);
             splitter_slider.classList.add(slider[2]);
         }            
         else {
             slider[0].classList.add("invisible");
-            slider_block.classList.remove(slider[1]);
+            bg_slider.classList.remove(slider[1]);
             splitter_slider.classList.remove(slider[2]);
         }
     }

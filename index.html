@@ -10,62 +10,66 @@
 
 <body>
 	<header>
-		<div class="header" id="home">
+		<div class="bg_header">
 			<div class="wrapper">
-				<h1 class="logo logo_color-1">Singolo</h1><span class="logo logo_color-2">*</span>
-				<nav class="nav">
-					<ul id="nav__ul">
-						<li class="nav__li">
-							<a href="#home" class="nav__link nav__link_active">Home</a>
-						</li>
-						<li class="nav__li nav__point">·</li>
-						<li class="nav__li">
-							<a href="#services" class="nav__link">Services</a>
-						</li>
-						<li class="nav__li nav__point">·</li>
-						<li class="nav__li">
-							<a href="#portfolio" class="nav__link">Portfolio</a>
-						</li>
-						<li class="nav__li nav__point">·</li>
-						<li class="nav__li">
-							<a href="#about" class="nav__link">About</a>
-						</li>
-						<li class="nav__li nav__point">·</li>
-						<li class="nav__li">
-							<a href="#contact" class="nav__link">Contact</a>
-						</li>
-					</ul>
-				</nav>
+				<div class="header" id="home">
+					<h1 class="logo logo_color-1">Singolo</h1><span class="logo logo_color-2">*</span>
+					<nav class="nav">
+						<ul id="nav__ul">
+							<li class="nav__li">
+								<a href="#home" class="nav__link nav__link_active">Home</a>
+							</li>
+							<li class="nav__li nav__point">·</li>
+							<li class="nav__li">
+								<a href="#services" class="nav__link">Services</a>
+							</li>
+							<li class="nav__li nav__point">·</li>
+							<li class="nav__li">
+								<a href="#portfolio" class="nav__link">Portfolio</a>
+							</li>
+							<li class="nav__li nav__point">·</li>
+							<li class="nav__li">
+								<a href="#about" class="nav__link">About</a>
+							</li>
+							<li class="nav__li nav__point">·</li>
+							<li class="nav__li">
+								<a href="#contact" class="nav__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>				
 			</div>
 		</div>		
 		<div class="splitter splitter_header"></div>
 	</header>
 	<main>
-		<div id="slider-block" class="slider-block__color-1">
+		<div id="bg_slider" class="bg_slider_1">
 			<div class="wrapper">
-				<img src="assets/slider/chev.png" alt="arrow" class="chev" id="chev__left" />
-				<div id="silder_1" class="slider">
-					<div class="phone_1">
-						<img src="assets/slider/shadow.png" alt="shadow__vertical" class="shadow shadow__vertical" />
-						<img src="assets/slider/phone.png" alt="phone__vertical" class="phone" id="phone__vertical" />
-						<div id="phone_content_1"></div>
+				<div class="slider-block">
+					<img src="assets/slider/chev.png" alt="arrow" class="chev" id="chev__left" />
+					<div id="silder_1" class="slider">
+						<div class="phone_1">
+							<img src="assets/slider/shadow.png" alt="shadow__vertical" class="shadow shadow__vertical" />
+							<img src="assets/slider/phone.png" alt="phone__vertical" class="phone" id="phone__vertical" />
+							<div id="phone_content_1"></div>
+						</div>
+						<div class="phone_2">
+							<img src="assets/slider/shadow.png" alt="shadow__horizontal" class="shadow shadow__horizontal" />
+							<img src="assets/slider/phone.png" alt="phone__horizontal" class="phone" id="phone__horizontal" />
+							<div id="phone_content_2"></div>
+						</div>
 					</div>
-					<div class="phone_2">
-						<img src="assets/slider/shadow.png" alt="shadow__horizontal" class="shadow shadow__horizontal" />
-						<img src="assets/slider/phone.png" alt="phone__horizontal" class="phone" id="phone__horizontal" />
-						<div id="phone_content_2"></div>
+					<div id="silder_2" class="slider invisible">
+						<img src="assets/slider/slider2.png" alt="slider2" class="slider_2_img" />
 					</div>
-				</div>
-				<div id="silder_2" class="slider invisible">
-					<img src="assets/slider/slider2.png" alt="slider2" class="slider_2_img" />
-				</div>
-				<img src="assets/slider/chev.png" alt="arrow" class="chev" id="chev__rigth" />
+					<img src="assets/slider/chev.png" alt="arrow" class="chev" id="chev__rigth" />
+				</div>				
 			</div>
 		</div>
-		<div id="splitter_slider" class="splitter splitter_slider__1"></div>
-		<div class="our-services-block" id="services">
+		<div id="splitter_slider" class="splitter splitter_slider_1"></div>
+		<div class="bg_services" >
 			<div class="wrapper">
-				<section class="services">
+				<section class="services" id="services">
 					<h2>Our Services</h2>
 					<p class="services-header-paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 					<div class="services-grid">
@@ -147,7 +151,7 @@
 		</div>
 		<div class="splitter splitter_main"></div>
 		<div class="portfolio" id="portfolio">
-			<div class="wrapper">
+			<div class="wrapper">				
 				<h2>Portfolio</h2>
 				<p class="porfolio-paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 				<ul id="tags-ul">
