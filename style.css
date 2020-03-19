@@ -56,9 +56,15 @@ p {
 }
 
 .wrapper {
-	width: 940px;
+	max-width: 940px;
 	margin: auto;
 	padding: 0px 40px;
+}
+
+.wrapper_medium {
+	max-width: 960px;
+	margin: auto;
+	padding: 0px 30px;
 }
 
 .header {
@@ -66,12 +72,6 @@ p {
 	padding-top: 28px;
 	padding-bottom: 31px;
 	color: #ffffff;
-}
-
-.wrapper_medium {
-	width: 960px;
-	margin: auto;
-	padding: 0px 30px;
 }
 
 .logo {
@@ -314,12 +314,6 @@ p {
 	font-weight: normal;
 }
 
-.wrapper {
-	width: 940px;
-	margin: auto;
-	padding: 0px 40px;
-}
-
 .splitter {
 	height: 6px;
 }
@@ -373,8 +367,12 @@ p {
 
 .portfolio-img {
 	margin: 10px;
-	height: 187px;
-	width: 220px;
+}
+
+.portfolio-img::before {
+	content: "";
+	float: left;
+	padding-top: 100%;
 }
 
 .portfolio-img_active {
@@ -701,4 +699,35 @@ footer {
 
 .invisible {
 	display: none;
+}
+
+@media (max-width: 768px) {
+	.services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#portfolio-grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 375px) {
+	.services-grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	#portfolio-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	.about-us-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.get-a-quote__grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
