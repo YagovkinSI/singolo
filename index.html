@@ -9,280 +9,299 @@
 </head>
 
 <body>
-	<header class="header" id="home">
+	<header class="header">
 		<div class="wrapper">
-			<h1 class="logo logo_color-1">Singolo</h1><span class="logo logo_color-2">*</span>
-			<nav class="nav">
-				<ul id="nav__ul">
-					<li class="nav__li">
-						<a href="#home" class="nav__link nav__link_active">Home</a>
-					</li>
-					<li class="nav__li nav__point">·</li>
-					<li class="nav__li">
-						<a href="#services" class="nav__link">Services</a>
-					</li>
-					<li class="nav__li nav__point">·</li>
-					<li class="nav__li">
-						<a href="#portfolio" class="nav__link">Portfolio</a>
-					</li>
-					<li class="nav__li nav__point">·</li>
-					<li class="nav__li">
-						<a href="#about" class="nav__link">About</a>
-					</li>
-					<li class="nav__li nav__point">·</li>
-					<li class="nav__li">
-						<a href="#contact" class="nav__link">Contact</a>
-					</li>
-				</ul>
-			</nav>
+			<div class="header__content">
+				<div class="logo">
+					<h1 class="logo_h1">Singolo</h1><span class="logo_star">*</span>
+				</div>				
+				<nav class="nav">
+					<ul id="nav__ul">
+						<li class="nav__li">
+							<a href="#home" class="nav__link nav__link_active">Home</a>
+						</li>
+						<li class="nav__li nav__point">·</li>
+						<li class="nav__li">
+							<a href="#services" class="nav__link">Services</a>
+						</li>
+						<li class="nav__li nav__point">·</li>
+						<li class="nav__li">
+							<a href="#portfolio" class="nav__link">Portfolio</a>
+						</li>
+						<li class="nav__li nav__point">·</li>
+						<li class="nav__li">
+							<a href="#about" class="nav__link">About</a>
+						</li>
+						<li class="nav__li nav__point">·</li>
+						<li class="nav__li">
+							<a href="#contact" class="nav__link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
+		<div class="splitter splitter_header"></div>
 	</header>
-	<div class="splitter splitter_header"></div>
-	<div id="slider-block" class="slider-block__color-1">
-		<div class="wrapper">
-			<img src="assets/slider/chev.png" alt="arrow" class="chev" id="chev__left" />
-			<div id="silder_1" class="slider">
-				<div class="phone_1">
-					<img src="assets/slider/shadow.png" alt="shadow__vertical" class="shadow shadow__vertical" />
-					<img src="assets/slider/phone.png" alt="phone__vertical" class="phone" id="phone__vertical" />
-					<div id="phone_content_1"></div>
+	<main>
+		<div class="slider scroll-margin-top"  id="home">
+			<div class="slider__carousel">
+				<div class="slider__item slider__item_1">
+					<div class="wrapper">
+						<div class="slider__slide">
+							<div class="phone phone_1">
+								<img src="assets/slider/shadow.png" alt="shadow" class="phone__shadow phone__shadow_1" />
+								<img src="assets/slider/phone.png" alt="phone" class="phone__obj phone__obj_1" />
+								<div class="phone__content phone__content_1"></div>
+							</div>
+							<div class="phone phone_2">
+								<img src="assets/slider/shadow.png" alt="shadow" class="phone__shadow phone__shadow_2" />
+								<img src="assets/slider/phone.png" alt="phone" class="phone__obj phone__obj_2" />
+								<div class="phone__content phone__content_2"></div>
+							</div>
+						</div>
+					</div>
+					<div class="splitter splitter_slider_1"></div>
 				</div>
-				<div class="phone_2">
-					<img src="assets/slider/shadow.png" alt="shadow__horizontal" class="shadow shadow__horizontal" />
-					<img src="assets/slider/phone.png" alt="phone__horizontal" class="phone" id="phone__horizontal" />
-					<div id="phone_content_2"></div>
-				</div>
-			</div>
-			<div id="silder_2" class="slider invisible">
-				<img src="assets/slider/slider2.png" alt="slider2" class="slider_2_img" />
-			</div>
-			<img src="assets/slider/chev.png" alt="arrow" class="chev" id="chev__rigth" />
-		</div>
-	</div>
-	<div id="splitter_slider" class="splitter splitter_slider__1"></div>
-	<main class="our-services-block" id="services">
-		<div class="wrapper">
-			<article class="services">
-				<h2>Our Services</h2>
-				<p class="services-header-paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-				<div class="services-grid">
-					<div class="service">
-						<div class="services-logo">
-							<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
-							<img src="assets/services/ico-pen.png" alt="pen" class="ico ico-label" />
+				<div class="slider__item slider__item_2 invisible">
+					<div class="wrapper">
+						<div class="slider__slide">
+							<img src="assets/slider/slider2.png" alt="slider2" class="slider__slide_2" />
 						</div>
-						<div class="service-text">
-							<h4>Custom Design</h4>
-							<p class="service-paragraph">
-								Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
-							</p>
-						</div>
-					</div>
-					<div class="service">
-						<div class="services-logo">
-							<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
-							<img src="assets/services/ico-bulb.png" alt="bulb" class="ico ico-label" />
-						</div>
-						<div class="service-text">
-							<h4>Inovative Ideas</h4>
-							<p class="service-paragraph">
-								Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
-							</p>
-						</div>
-					</div>
-					<div class="service">
-						<div class="services-logo">
-							<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
-							<img src="assets/services/ico-heart.png" alt="heart" class="ico ico-label" />
-						</div>
-						<div class="service-text">
-							<h4>Love Is The Answer</h4>
-							<p class="service-paragraph">
-								Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
-							</p>
-						</div>
-					</div>
-					<div class="service">
-						<div class="services-logo">
-							<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
-							<img src="assets/services/ico-phone.png" alt="phone" class="ico ico-label" />
-						</div>
-						<div class="service-text">
-							<h4>Responsive Layout</h4>
-							<p class="service-paragraph">
-								Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
-							</p>
-						</div>
-					</div>
-					<div class="service">
-						<div class="services-logo">
-							<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
-							<img src="assets/services/ico-bubble.png" alt="bubble" class="ico ico-label" />
-						</div>
-						<div class="service-text">
-							<h4>24 / 7 Support</h4>
-							<p class="service-paragraph">
-								Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
-							</p>
-						</div>
-					</div>
-					<div class="service">
-						<div class="services-logo">
-							<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
-							<img src="assets/services/ico-star.png" alt="star" class="ico ico-label" />
-						</div>
-						<div class="service-text">
-							<h4>Feel Like A Star</h4>
-							<p class="service-paragraph">
-								Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
-							</p>
-						</div>
-					</div>
-				</div>
-			</article>
-		</div>
-	</main>
-	<div class="splitter splitter_main"></div>
-	<div class="portfolio" id="portfolio">
-		<div class="wrapper">
-			<h2>Portfolio</h2>
-			<p class="porfolio-paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-			<ul id="tags-ul">
-				<li class="tags-li tags-li_active">
-					<a class="tags-link">All</a>
-				</li>
-				<li class="tags-li">
-					<a class="tags-link">Web Design</a>
-				</li>
-				<li class="tags-li">
-					<a class="tags-link">Graphic Design</a>
-				</li>
-				<li class="tags-li">
-					<a class="tags-link">Artwork</a>
-				</li>
-			</ul>
-		</div>
-		<div class="wrapper_medium">
-			<div class="portfolio-zone">
-				<div id="portfolio-grid">
-					<div class="portfolio-img portfolio-img__1"></div>
-					<div class="portfolio-img portfolio-img__2"></div>
-					<div class="portfolio-img portfolio-img__3"></div>
-					<div class="portfolio-img portfolio-img__4"></div>
-					<div class="portfolio-img portfolio-img__5"></div>
-					<div class="portfolio-img portfolio-img__6"></div>
-					<div class="portfolio-img portfolio-img__7"></div>
-					<div class="portfolio-img portfolio-img__8"></div>
-					<div class="portfolio-img portfolio-img__9"></div>
-					<div class="portfolio-img portfolio-img__10"></div>
-					<div class="portfolio-img portfolio-img__11"></div>
-					<div class="portfolio-img portfolio-img__12"></div>
+					</div>					
+					<div class="splitter splitter_slider_2"></div>
 				</div>
 			</div>
+			<div class="slider__control slider__control_left"></div>
+			<div class="slider__control slider__control_rigth"></div>
 		</div>
-	</div>
-	<div class="splitter splitter_portfolio"></div>
-	<div class="about-us" id="about">
-		<div class="wrapper">
-			<h2>About Us</h2>
-			<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-			<div class="about-us-grid">
-				<div class="about-person">
-					<div class="face face__1"></div>
-					<h4>Adam Jensen</h4>
-					<p class="about-person-rapagraph">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__facebook"></div>
+		<div class="services scroll-margin-top" id="services">
+			<div class="wrapper">
+				<section class="services__content">
+					<h2>Our Services</h2>
+					<p class="services-header-paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+					<div class="services-grid">
+						<div class="service">
+							<div class="services-logo">
+								<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
+								<img src="assets/services/ico-pen.png" alt="pen" class="ico ico-label" />
+							</div>
+							<div class="service-text">
+								<h4>Custom Design</h4>
+								<p class="service-paragraph">
+									Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+								</p>
+							</div>
+						</div>
+						<div class="service">
+							<div class="services-logo">
+								<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
+								<img src="assets/services/ico-bulb.png" alt="bulb" class="ico ico-label" />
+							</div>
+							<div class="service-text">
+								<h4>Inovative Ideas</h4>
+								<p class="service-paragraph">
+									Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+								</p>
+							</div>
+						</div>
+						<div class="service">
+							<div class="services-logo">
+								<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
+								<img src="assets/services/ico-heart.png" alt="heart" class="ico ico-label" />
+							</div>
+							<div class="service-text">
+								<h4>Love Is The Answer</h4>
+								<p class="service-paragraph">
+									Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+								</p>
+							</div>
+						</div>
+						<div class="service">
+							<div class="services-logo">
+								<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
+								<img src="assets/services/ico-phone.png" alt="phone" class="ico ico-label" />
+							</div>
+							<div class="service-text">
+								<h4>Responsive Layout</h4>
+								<p class="service-paragraph">
+									Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
+								</p>
+							</div>
+						</div>
+						<div class="service">
+							<div class="services-logo">
+								<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
+								<img src="assets/services/ico-bubble.png" alt="bubble" class="ico ico-label" />
+							</div>
+							<div class="service-text">
+								<h4>24 / 7 Support</h4>
+								<p class="service-paragraph">
+									Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
+								</p>
+							</div>
+						</div>
+						<div class="service">
+							<div class="services-logo">
+								<img src="assets/services/ico-ellipse.png" alt="ellipse" class="ico ico-ellipse" />
+								<img src="assets/services/ico-star.png" alt="star" class="ico ico-label" />
+							</div>
+							<div class="service-text">
+								<h4>Feel Like A Star</h4>
+								<p class="service-paragraph">
+									Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__g-plus"></div>
-					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__tweeter"></div>
-					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__linked-in"></div>
-					</div>
-				</div>
-				<div class="about-person">
-					<div class="face face__2"></div>
-					<h4>Desmond Miles</h4>
-					<p class="about-person-rapagraph">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__facebook"></div>
-					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__g-plus"></div>
-					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__tweeter"></div>
-					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__linked-in"></div>
-					</div>
-				</div>
-				<div class="about-person">
-					<div class="face face__3"></div>
-					<h4>Scolara Visari</h4>
-					<p class="about-person-rapagraph">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__facebook"></div>
-					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__g-plus"></div>
-					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__tweeter"></div>
-					</div>
-					<div class="mes-ico-ellipse about-us__mes">
-						<div class="mes-ico mes-ico__linked-in"></div>
+				</section>
+			</div>
+			<div class="splitter splitter_services"></div>
+		</div>
+		<div class="portfolio scroll-margin-top" id="portfolio">
+			<div class="wrapper">
+				<section class="porfolio_content">
+					<h2>Portfolio</h2>
+					<p class="porfolio-paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+					<ul id="tags-ul">
+						<li class="tags-li tags-li_active">
+							<a class="tags-link">All</a>
+						</li>
+						<li class="tags-li">
+							<a class="tags-link">Web Design</a>
+						</li>
+						<li class="tags-li">
+							<a class="tags-link">Graphic Design</a>
+						</li>
+						<li class="tags-li">
+							<a class="tags-link">Artwork</a>
+						</li>
+					</ul>
+				</section>				
+				<div class="portfolio-zone">
+					<div id="portfolio-grid">
+						<div class="portfolio-img portfolio-img__1"></div>
+						<div class="portfolio-img portfolio-img__2"></div>
+						<div class="portfolio-img portfolio-img__3"></div>
+						<div class="portfolio-img portfolio-img__4"></div>
+						<div class="portfolio-img portfolio-img__5"></div>
+						<div class="portfolio-img portfolio-img__6"></div>
+						<div class="portfolio-img portfolio-img__7"></div>
+						<div class="portfolio-img portfolio-img__8"></div>
+						<div class="portfolio-img portfolio-img__9"></div>
+						<div class="portfolio-img portfolio-img__10"></div>
+						<div class="portfolio-img portfolio-img__11"></div>
+						<div class="portfolio-img portfolio-img__12"></div>
 					</div>
 				</div>
 			</div>
+			<div class="splitter splitter_portfolio"></div>
 		</div>
-	</div>
-	<div class="splitter splitter_about-us"></div>
-	<div class="get-a-quote" id="contact">
-		<div class="wrapper">
-			<div>
-				<h2>Get a Quote</h2>
-				<p>
-					Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-				</p>
-			</div>
-			<div class="get-a-quote__grid">
-				<form class="get-a-quote__form" action="get-a-quote" method="POST">
-					<input class="input" type="text" name="name" id="name" placeholder="Name (Required)" required>
-					<input class="input" type="email" name="email" id="email" placeholder="Email (Required)" required>
-					<input class="input" type="text" name="answer" id="subject" placeholder="Subject">
-					<textarea class="input textarea" name="answer" cols="20" rows="10" id="describe" placeholder="Describe your project in detail..."></textarea>
-					<button type="button" id="btn_send" class="input button get-a-quote__button">Send</button>
-				</form>
-				<div class="get-a-quote__info">
-					<h4>Contact Information</h4>
-					<p class="get-a-quote__info__text">
-						Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
-					</p>
-					<div class="contacts">
-						<div class="contact">
-							<div class="get-a-quote__ico get-a-quote__ico__location"></div>
-							<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="#">Elm St. 14/05 Lost City</a></p>
+		<div class="about-us" id="about">
+			<div class="wrapper">
+				<section class="about-us_content">
+					<h2>About Us</h2>
+					<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+					<div class="about-us-grid">
+						<div class="about-person">
+							<div class="face face__1"></div>
+							<h4>Adam Jensen</h4>
+							<p class="about-person-rapagraph">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__facebook"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__g-plus"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__tweeter"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__linked-in"></div>
+							</div>
 						</div>
-						<div class="contact">
-							<div class="get-a-quote__ico get-a-quote__ico__phone"></div>
-							<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="tel:035283318635">03528 331 86 35 </a></p>
+						<div class="about-person">
+							<div class="face face__2"></div>
+							<h4>Desmond Miles</h4>
+							<p class="about-person-rapagraph">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__facebook"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__g-plus"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__tweeter"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__linked-in"></div>
+							</div>
 						</div>
-						<div class="contact">
-							<div class="get-a-quote__ico get-a-quote__ico__mail"></div>
-							<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="mailto:info@singolo.com">info@singolo.com</a></p>
+						<div class="about-person">
+							<div class="face face__3"></div>
+							<h4>Scolara Visari</h4>
+							<p class="about-person-rapagraph">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__facebook"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__g-plus"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__tweeter"></div>
+							</div>
+							<div class="mes-ico-ellipse about-us__mes">
+								<div class="mes-ico mes-ico__linked-in"></div>
+							</div>
 						</div>
 					</div>
-				</div>
+				</section>				
 			</div>
+			<div class="splitter splitter_about-us"></div>
 		</div>
-	</div>
-	<div class="splitter splitter_get-a-quote"></div>
-	<footer>
+		<div class="get-a-quote scroll-margin-top" id="contact">
+			<div class="wrapper">
+				<section class="get-a-quote_content">
+					<div>
+						<h2>Get a Quote</h2>
+						<p>
+							Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+						</p>
+					</div>
+					<div class="get-a-quote__grid">
+						<form class="get-a-quote__form" action="get-a-quote" method="POST">
+							<input class="input" type="text" name="name" id="name" placeholder="Name (Required)" required>
+							<input class="input" type="email" name="email" id="email" placeholder="Email (Required)" required>
+							<input class="input" type="text" name="answer" id="subject" placeholder="Subject">
+							<textarea class="input textarea" name="answer" cols="20" rows="10" id="describe" placeholder="Describe your project in detail..."></textarea>
+							<button type="button" id="btn_send" class="input button get-a-quote__button">Send</button>
+						</form>
+						<div class="get-a-quote__info">
+							<h4>Contact Information</h4>
+							<p class="get-a-quote__info__text">
+								Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+							</p>
+							<div class="contacts">
+								<div class="contact">
+									<div class="get-a-quote__ico get-a-quote__ico__location"></div>
+									<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="#">Elm St. 14/05 Lost City</a></p>
+								</div>
+								<div class="contact">
+									<div class="get-a-quote__ico get-a-quote__ico__phone"></div>
+									<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="tel:035283318635">03528 331 86 35 </a></p>
+								</div>
+								<div class="contact">
+									<div class="get-a-quote__ico get-a-quote__ico__mail"></div>
+									<p class="get-a-quote__info__text get-a-quote__info__contact"><a href="mailto:info@singolo.com">info@singolo.com</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>				
+			</div>
+			<div class="splitter splitter_get-a-quote"></div>
+		</div>
+</main>
+	<footer class="footer">
 		<div class="wrapper">
 			<div class="footer_line">
 				<p class="footer__text">© Copyright 2013</p>
