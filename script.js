@@ -1,24 +1,21 @@
 const nav = document.getElementById("nav__ul");
 const anchors = document.querySelectorAll('a[href*="#"]');
 
-const arrow_left = document.getElementById("chev__left");
-const arrow_rigth = document.getElementById("chev__rigth");
+const arrow_left = document.getElementById("slider__control_left");
+const arrow_rigth = document.getElementById("slider__control_rigth");
 const bg_slider = document.getElementById("slider");
 const splitter_slider = document.getElementById("splitter_slider");
 
-const slider1 = [
-    document.getElementById("silder_1"),
-    "slider_1",
-    "splitter_slider_1"
-];
-const slider2 = [
-    document.getElementById("silder_2"),
-    "slider_2",
-    "splitter_slider_2"
 
-];
-const sliders = [slider1, slider2];
-let active_slider = 0;
+const slides = document.querySelectorAll(".slider__item");
+let active_slide = 0;
+let is_enable = true;
+let is_to_end = true;
+let is_from_end = true;
+let is_func_end = true;
+slides.forEach(slide => {
+    slide.addEventListener("animationend", animationend_slide)
+});
 
 const phone_1 = document.getElementById("phone__vertical"); 
 const phone_2 = document.getElementById("phone__horizontal");
@@ -92,23 +89,49 @@ function changeElementVisible(element) {
 }
 
 function changeSlider(direction) {
-    active_slider = (active_slider + direction + sliders.length) % sliders.length;
-    for (var i = 0; i < sliders.length; i++) {
-        var slider = sliders[i];
-        if (i == active_slider) {
-            slider[0].classList.remove("invisible");
-            bg_slider.classList.add(slider[1]);
-            splitter_slider.classList.add(slider[2]);
-        }            
-        else {
-            slider[0].classList.add("invisible");
-            bg_slider.classList.remove(slider[1]);
-            splitter_slider.classList.remove(slider[2]);
-        }
-    }
-    
+    if (!is_enable)
+        return;
+    is_enable = false;
+    is_to_end = false;
+    is_from_end = false;
+    is_func_end = false;
 
+    var animation_outgoing = direction < 0 ? "to-right" : "to-left";
+    var animation_coming = direction < 0 ? "from-left" : "from-right";
+
+    var slide_outgoing = slides[active_slide];
+    active_slide = (active_slide + direction + slides.length) % slides.length;
+    var slide_coming = slides[active_slide];
+
+    slide_outgoing.classList.add(animation_outgoing);
+
+    slide_coming.classList.remove("invisible");
+    slide_coming.classList.add(animation_coming);
+
+    
+    is_func_end = true;
+    check_enable();
 }
+
+function animationend_slide() {
+    if (slides[active_slide] != this) {
+        this.classList.remove("to-right", "to-left");
+        this.classList.add("invisible");
+        is_to_end = true;
+        check_enable();
+    }
+    else {
+        this.classList.remove("from-left", "from-right");
+        is_from_end = true;
+        check_enable();
+    }
+}
+
+
+function check_enable() {
+    is_enable = is_to_end && is_from_end && is_func_end;
+}
+
 
 
 
