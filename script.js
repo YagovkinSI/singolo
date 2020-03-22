@@ -1,47 +1,55 @@
+// элементы
+const header = document.querySelector('.header');
 const nav = document.getElementById("nav__ul");
 const anchors = document.querySelectorAll('a[href*="#"]');
-
-const arrow_left = document.getElementById("chev__left");
-const arrow_rigth = document.getElementById("chev__rigth");
-const slider_block = document.getElementById("slider-block");
-const splitter_slider = document.getElementById("splitter_slider");
-
-const slider1 = [
-    document.getElementById("silder_1"),
-    "slider-block__color-1",
-    "splitter_slider__1"
-];
-const slider2 = [
-    document.getElementById("silder_2"),
-    "slider-block__color-2",
-    "splitter_slider__2"
-
-];
-const sliders = [slider1, slider2];
-let active_slider = 0;
-
-const phone_1 = document.getElementById("phone__vertical"); 
-const phone_2 = document.getElementById("phone__horizontal");
-const phone_content_1 = document.getElementById("phone_content_1");
-const phone_content_2 = document.getElementById("phone_content_2");
-
+const slider__control_left = document.querySelector(".slider__control_left");
+const slider__control_rigth = document.querySelector(".slider__control_rigth");
+const slides = document.querySelectorAll(".slider__item");
+const phone_1 = document.querySelector(".phone__obj_1");
+const phone_2 = document.querySelector(".phone__obj_2");
+const phone_content_1 = document.querySelector(".phone__content_1");
+const phone_content_2 = document.querySelector(".phone__content_2");
 const tag_ul = document.getElementById("tags-ul");
 const portfolio_grid = document.getElementById("portfolio-grid");
-
 const portfolio_images = document.getElementsByClassName("portfolio-img");
-
 const btn_send = document.getElementById("btn_send");
 const message_ok = document.getElementById("message-ok");
 
-nav.addEventListener("click", (event) => {   
-    nav.querySelectorAll("a").forEach(li => li.classList.remove("nav__link_active"));
-    event.target.classList.add("nav__link_active");
+// константы
+const HEADER_HEIGHT = header.clientHeight;
+
+//переменные и флаги
+let active_slide = 0;
+let is_enable = true;
+let is_to_end = true;
+let is_from_end = true;
+let is_func_end = true;
+
+
+//подписки
+slides.forEach(slide => {
+    slide.addEventListener("animationend", animationend_slide)
+});
+nav.addEventListener("click", (event) => { navigation(event) });
+slider__control_left.addEventListener("click", () => { changeSlider(-1) });
+slider__control_rigth.addEventListener("click", () => { changeSlider(1) });
+tag_ul.addEventListener("click", (event) => { tags_navigation(event) });
+phone_1.addEventListener("click", () => { changeElementVisible(phone_content_1) });
+phone_content_1.addEventListener("click", () => { changeElementVisible(phone_content_1) });
+phone_2.addEventListener("click", () => { changeElementVisible(phone_content_2) });
+phone_content_2.addEventListener("click", () => { changeElementVisible(phone_content_2) });
+btn_send.addEventListener("click", btn_send_click);
+message_ok.addEventListener("click", () => {
+    changeElementVisible(document.getElementById("message-block"));
 });
 
-arrow_left.addEventListener("click", () => { changeSlider(-1) });
-arrow_rigth.addEventListener("click", () => { changeSlider(1) });
+//функции
+function navigation(event) {
+    nav.querySelectorAll("a").forEach(li => li.classList.remove("nav__link_active"));
+    event.target.classList.add("nav__link_active");
+}
 
-tag_ul.addEventListener("click", (event) => {
+function tags_navigation(event) {
     var li = event.target.classList.contains("tags-li")
         ? event.target
         : event.target.parentNode;
@@ -51,12 +59,7 @@ tag_ul.addEventListener("click", (event) => {
     li.classList.add("tags-li_active");
     var array = portfolio_grid.querySelectorAll("div");
     portfolio_grid.append(array[0]);
-});
-
-phone_1.addEventListener("click", () => { changeElementVisible(phone_content_1) });
-phone_content_1.addEventListener("click", () => { changeElementVisible(phone_content_1) });
-phone_2.addEventListener("click", () => { changeElementVisible(phone_content_2) });
-phone_content_2.addEventListener("click", () => { changeElementVisible(phone_content_2) });
+}
 
 for (var i = 0; i < portfolio_images.length; i++) {
     portfolio_images[i].addEventListener("click", (event) => {
@@ -66,11 +69,7 @@ for (var i = 0; i < portfolio_images.length; i++) {
     });
 }
 
-message_ok.addEventListener("click", () => {
-    changeElementVisible(document.getElementById("message-block"));
-});
-
-btn_send.addEventListener("click", () => {
+function btn_send_click() {
     if (!document.getElementById("name").checkValidity() || !document.getElementById("email").checkValidity())
         return;
     var subject = document.getElementById("subject").value.toString();
@@ -80,7 +79,7 @@ btn_send.addEventListener("click", () => {
     if (describe == "") describe = "No describe";
     document.getElementById("message-describe").innerText = describe;
     changeElementVisible(document.getElementById("message-block"));
-});
+}
 
 function changeElementVisible(element) {
     if (element.classList.contains("invisible")) {
@@ -92,23 +91,48 @@ function changeElementVisible(element) {
 }
 
 function changeSlider(direction) {
-    active_slider = (active_slider + direction + sliders.length) % sliders.length;
-    for (var i = 0; i < sliders.length; i++) {
-        var slider = sliders[i];
-        if (i == active_slider) {
-            slider[0].classList.remove("invisible");
-            slider_block.classList.add(slider[1]);
-            splitter_slider.classList.add(slider[2]);
-        }            
-        else {
-            slider[0].classList.add("invisible");
-            slider_block.classList.remove(slider[1]);
-            splitter_slider.classList.remove(slider[2]);
-        }
-    }
-    
+    if (!is_enable)
+        return;
+    is_enable = false;
+    is_to_end = false;
+    is_from_end = false;
+    is_func_end = false;
 
+    var animation_outgoing = direction < 0 ? "animation_to-right" : "animation_to-left";
+    var animation_coming = direction < 0 ? "animation_from-left" : "animation_from-right";
+
+    var slide_outgoing = slides[active_slide];
+    active_slide = (active_slide + direction + slides.length) % slides.length;
+    var slide_coming = slides[active_slide];
+
+    slide_outgoing.classList.add(animation_outgoing);
+
+    slide_coming.classList.remove("invisible");
+    slide_coming.classList.add(animation_coming);
+
+    
+    is_func_end = true;
+    check_enable();
 }
+
+function animationend_slide() {
+    if (slides[active_slide] != this) {
+        this.classList.remove("animation_to-right", "animation_to-left");
+        this.classList.add("invisible");
+        is_to_end = true;
+    }
+    else {
+        this.classList.remove("animation_from-left", "animation_from-right");
+        is_from_end = true;
+    }
+    check_enable();
+}
+
+
+function check_enable() {
+    is_enable = is_to_end && is_from_end && is_func_end;
+}
+
 
 
 
