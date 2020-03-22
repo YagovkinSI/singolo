@@ -11,8 +11,10 @@
 <body>
 	<header class="header">
 		<div class="wrapper">
-			<div class="header__content" id="home">
-				<h1 class="logo">Singolo</h1><span class="logo logo_color-2">*</span>
+			<div class="header__content">
+				<div class="logo">
+					<h1 class="logo_h1">Singolo</h1><span class="logo_star">*</span>
+				</div>				
 				<nav class="nav">
 					<ul id="nav__ul">
 						<li class="nav__li">
@@ -41,42 +43,40 @@
 		<div class="splitter splitter_header"></div>
 	</header>
 	<main>
-		<div class="slider">
+		<div class="slider scroll-margin-top"  id="home">
 			<div class="slider__carousel">
-				<div class="slider__item slider__item_1" id="slider__item_1">
+				<div class="slider__item slider__item_1">
 					<div class="wrapper">
-						<div class="slider__slide slider__slide_1">
-							<div class="phone_1">
-								<img src="assets/slider/shadow.png" alt="shadow__vertical" class="shadow shadow__vertical" />
-								<img src="assets/slider/phone.png" alt="phone__vertical" class="phone" id="phone__vertical" />
-								<div id="phone_content_1"></div>
+						<div class="slider__slide">
+							<div class="phone phone_1">
+								<img src="assets/slider/shadow.png" alt="shadow" class="phone__shadow phone__shadow_1" />
+								<img src="assets/slider/phone.png" alt="phone" class="phone__obj phone__obj_1" />
+								<div class="phone__content phone__content_1"></div>
 							</div>
-							<div class="phone_2">
-								<img src="assets/slider/shadow.png" alt="shadow__horizontal" class="shadow shadow__horizontal" />
-								<img src="assets/slider/phone.png" alt="phone__horizontal" class="phone" id="phone__horizontal" />
-								<div id="phone_content_2"></div>
+							<div class="phone phone_2">
+								<img src="assets/slider/shadow.png" alt="shadow" class="phone__shadow phone__shadow_2" />
+								<img src="assets/slider/phone.png" alt="phone" class="phone__obj phone__obj_2" />
+								<div class="phone__content phone__content_2"></div>
 							</div>
 						</div>
 					</div>
 					<div class="splitter splitter_slider_1"></div>
 				</div>
-				<div class="slider__item slider__item_2 invisible" id="slider__item_2">
+				<div class="slider__item slider__item_2 invisible">
 					<div class="wrapper">
-						<div class="slider__slide slider__slide_2">
-							<div>
-								<img src="assets/slider/slider2.png" alt="slider2" class="slider_2_img" />
-							</div>
+						<div class="slider__slide">
+							<img src="assets/slider/slider2.png" alt="slider2" class="slider__slide_2" />
 						</div>
 					</div>					
 					<div class="splitter splitter_slider_2"></div>
 				</div>
 			</div>
-			<div class="slider__control slider__control_left" id="slider__control_left"></div>
-			<div class="slider__control slider__control_rigth" id="slider__control_rigth"></div>
+			<div class="slider__control slider__control_left"></div>
+			<div class="slider__control slider__control_rigth"></div>
 		</div>
-		<div class="services">
+		<div class="services scroll-margin-top" id="services">
 			<div class="wrapper">
-				<section class="services_content" id="services">
+				<section class="services__content">
 					<h2>Our Services</h2>
 					<p class="services-header-paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 					<div class="services-grid">
@@ -157,7 +157,7 @@
 			</div>
 			<div class="splitter splitter_services"></div>
 		</div>
-		<div class="portfolio" id="portfolio">
+		<div class="portfolio scroll-margin-top" id="portfolio">
 			<div class="wrapper">
 				<section class="porfolio_content">
 					<h2>Portfolio</h2>
@@ -258,7 +258,7 @@
 			</div>
 			<div class="splitter splitter_about-us"></div>
 		</div>
-		<div class="get-a-quote" id="contact">
+		<div class="get-a-quote scroll-margin-top" id="contact">
 			<div class="wrapper">
 				<section class="get-a-quote_content">
 					<div>
