@@ -3,17 +3,17 @@ const anchors = document.querySelectorAll('a[href*="#"]');
 
 const arrow_left = document.getElementById("chev__left");
 const arrow_rigth = document.getElementById("chev__rigth");
-const bg_slider = document.getElementById("bg_slider");
+const bg_slider = document.getElementById("slider");
 const splitter_slider = document.getElementById("splitter_slider");
 
 const slider1 = [
     document.getElementById("silder_1"),
-    "bg_slider_1",
+    "slider_1",
     "splitter_slider_1"
 ];
 const slider2 = [
     document.getElementById("silder_2"),
-    "bg_slider_2",
+    "slider_2",
     "splitter_slider_2"
 
 ];
