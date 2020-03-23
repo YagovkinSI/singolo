@@ -1,7 +1,7 @@
-// элементы
+// elements
 const header = document.querySelector('.header');
 const nav = document.getElementById("nav__ul");
-const anchors = document.querySelectorAll('a[href*="#"]');
+const blocks = document.querySelectorAll("main>div");
 const slider__control_left = document.querySelector(".slider__control_left");
 const slider__control_rigth = document.querySelector(".slider__control_rigth");
 const slides = document.querySelectorAll(".slider__item");
@@ -15,10 +15,10 @@ const portfolio_images = document.getElementsByClassName("portfolio-img");
 const btn_send = document.getElementById("btn_send");
 const message_ok = document.getElementById("message-ok");
 
-// константы
+// constants
 const HEADER_HEIGHT = header.clientHeight;
 
-//переменные и флаги
+// fields
 let active_slide = 0;
 let is_enable = true;
 let is_to_end = true;
@@ -26,7 +26,8 @@ let is_from_end = true;
 let is_func_end = true;
 
 
-//подписки
+// events
+document.addEventListener("scroll", onScroll)
 slides.forEach(slide => {
     slide.addEventListener("animationend", animationend_slide)
 });
@@ -39,11 +40,23 @@ phone_content_1.addEventListener("click", () => { changeElementVisible(phone_con
 phone_2.addEventListener("click", () => { changeElementVisible(phone_content_2) });
 phone_content_2.addEventListener("click", () => { changeElementVisible(phone_content_2) });
 btn_send.addEventListener("click", btn_send_click);
-message_ok.addEventListener("click", () => {
-    changeElementVisible(document.getElementById("message-block"));
-});
+message_ok.addEventListener("click", message_ok_click);
 
-//функции
+// functions
+function onScroll() {
+    var yPos = window.scrollY + HEADER_HEIGHT + 1;
+    blocks.forEach(b => {
+        var id = b.getAttribute("id");
+        var nav_element = document.querySelector(`a[href="#${id}"]`);
+        if (b.offsetTop <= yPos && b.offsetTop + b.offsetHeight > yPos) {
+            nav_element.classList.add("nav__link_active");
+        }
+        else {
+            nav_element.classList.remove("nav__link_active");
+        }
+    })
+}
+
 function navigation(event) {
     nav.querySelectorAll("a").forEach(li => li.classList.remove("nav__link_active"));
     event.target.classList.add("nav__link_active");
@@ -76,9 +89,14 @@ function btn_send_click() {
     if (subject == "") subject = "No subject";
     document.getElementById("message-subject").innerText = subject;
     var describe = document.getElementById("describe").value.toString();
-    if (describe == "") describe = "No describe";
+    if (describe == "") describe = "No description";
     document.getElementById("message-describe").innerText = describe;
     changeElementVisible(document.getElementById("message-block"));
+}
+
+function message_ok_click() {
+    changeElementVisible(document.getElementById("message-block"));
+    document.querySelector(".get-a-quote__form").reset();
 }
 
 function changeElementVisible(element) {
