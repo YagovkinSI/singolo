@@ -778,6 +778,14 @@ footer {
 }
 
 @media (max-width: 1019px) {
+	.slider__control_left {
+		left: 0;
+	}
+
+	.slider__control_rigth {
+		right: 0;
+	}
+
 	.services__grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
