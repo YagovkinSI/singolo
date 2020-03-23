@@ -95,7 +95,7 @@ p {
 	letter-spacing: -0.7px;
 }
 
-.logo_star {
+.logo__star {
 	color: #f06c64;
 }
 
@@ -351,13 +351,13 @@ p {
 	padding: 0 40px 59px;
 }
 
-.services-grid {
+.services__grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 28px 19px;
 }
 
-.service-paragraph {
+.service__paragraph {
 	font-size: 1.2rem;
 	font-weight: normal;
 	height: 80px;
@@ -381,19 +381,21 @@ p {
 	position: relative;
 }
 
-.ico-ellipse {
+.service__ellipse {
+	position: relative;
 	z-index: 5;
 	top: 2px;
 	left: 2px;
 }
 
-.ico-label {
+.service__label {
+	position: relative;
 	z-index: 10;
 	top: -45px;
 	left: 15px;
 }
 
-.service-text {
+.service__text {
 	padding-left: 5px;
 }
 
@@ -427,7 +429,7 @@ p {
 	font-weight: normal;
 }
 
-.porfolio_content {
+.porfolio__content {
 	padding: 0 40px;
 }
 
