@@ -75,9 +75,9 @@ p {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 1000;
 	background-color: #2d303a;
 	color: #ffffff;
+	z-index: 100;
 }
 
 .header__content {
@@ -88,12 +88,15 @@ p {
 	position: fixed;
 	top: 26px;
 	left: 20px;
-	z-index: 100;
 	display: none;
-	align-items: center;
 	width: 25px;
 	height: 18px;
 	cursor: pointer;
+}
+
+.mobile-menu__hamburger {
+	width: 100%;
+	height: 100%;
 	transition: transform 0.3s;
 }
 
@@ -114,7 +117,22 @@ p {
 }
 
 .mobile-menu_vertical {
-	transform: rotate(-90deg);
+	transform: rotate(90deg);
+}
+
+.mobile-menu__bg {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mobile-menu__panel {
+	width: 278px;
+	height: 100vh;
+	background-color: #2D303A;
 }
 
 .logo {
@@ -124,6 +142,8 @@ p {
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: -0.7px;
+	position: relative;
+	z-index: 110;
 }
 
 .logo__star {
@@ -844,6 +864,11 @@ footer {
 		font-size: 1.8rem;
 		letter-spacing: -8px;
 		text-align: center;
+	}
+
+	.logo_left {
+		text-align: left;
+		padding-left: 35px;
 	}
 
 	.nav {
