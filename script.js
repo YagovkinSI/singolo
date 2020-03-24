@@ -1,5 +1,6 @@
 // elements
 const header = document.querySelector('.header');
+const mobileMenu = document.querySelector(".mobile-menu");
 const nav = document.getElementById("nav__ul");
 const blocks = document.querySelectorAll("main>div");
 const slider__control_left = document.querySelector(".slider__control_left");
@@ -19,6 +20,7 @@ const message_ok = document.getElementById("message-ok");
 const HEADER_HEIGHT = header.clientHeight;
 
 // fields
+let isMobileMenuShow = false;
 let active_slide = 0;
 let is_enable = true;
 let is_to_end = true;
@@ -27,7 +29,8 @@ let is_func_end = true;
 
 
 // events
-document.addEventListener("scroll", onScroll)
+document.addEventListener("scroll", onScroll);
+mobileMenu.addEventListener("click", onMobileMenuClick);
 slides.forEach(slide => {
     slide.addEventListener("animationend", animationend_slide)
 });
@@ -55,6 +58,11 @@ function onScroll() {
             nav_element.classList.remove("nav__link_active");
         }
     })
+}
+
+function onMobileMenuClick() {
+    isMobileMenuShow = !isMobileMenuShow;
+    mobileMenu.classList.toggle("mobile-menu_vertical");
 }
 
 function navigation(event) {

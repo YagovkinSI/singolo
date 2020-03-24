@@ -33,7 +33,6 @@ html {
 
 h1 {
 	display: inline-block;
-	font-size: 2.5rem;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -83,6 +82,39 @@ p {
 
 .header__content {
 	padding: 28px 40px 31px;
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 26px;
+	left: 20px;
+	z-index: 100;
+	display: none;
+	align-items: center;
+	width: 25px;
+	height: 18px;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.hamburger-line {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	content: "";
+}
+
+.hamburger-line_2 {
+	top: 9px;
+}
+
+.hamburger-line_3 {
+	top: 18px;
+}
+
+.mobile-menu_vertical {
+	transform: rotate(-90deg);
 }
 
 .logo {
@@ -799,6 +831,29 @@ footer {
 }
 
 @media (max-width: 767px) {
+	.header__content {
+		padding: 26px 36px 17px 40px;
+	}
+	
+	.mobile-menu {
+		display: block;
+	}
+
+	.logo {
+		width: 100%;
+		font-size: 1.8rem;
+		letter-spacing: -8px;
+		text-align: center;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	.slider {
+		margin-top: 71px;
+	}
+
 	.services__grid {
 		grid-template-columns: repeat(1, 1fr);
 	}
