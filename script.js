@@ -67,6 +67,24 @@ function onMobileMenuClick() {
     mobileMenuHamburger.classList.toggle("mobile-menu_vertical");
     mobileMenuBackground.classList.toggle("invisible");
     logo.classList.toggle("logo_left");  
+    var nav__li_array = document.querySelectorAll(".nav__li");
+    if (isMobileMenuShow) {
+        nav__li_array.forEach(li => {
+            li.classList.add("nav__li_mobile");
+            if (li.classList.contains("nav__point"))
+                li.classList.add("invisible");
+        });
+        nav.classList.add("nav__ul_mobile");
+        document.querySelector(".mobile-menu__panel").append(nav);
+    }
+    else {
+        nav__li_array.classList.forEach(li => {
+            li.classList.remove("nav__li_mobile");
+            li.classList.remove("invisible");
+        });
+        nav.classList.remove("nav__ul_mobile");
+        document.querySelector(".nav").append(nav);
+    }
 }
 
 function navigation(event) {

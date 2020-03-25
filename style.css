@@ -155,6 +155,10 @@ p {
 	float: right;
 }
 
+.nav__ul_mobile {
+	padding-top: 219px;
+}
+
 .nav__li {
 	display: inline-block;
 	text-transform: uppercase;
@@ -162,6 +166,13 @@ p {
 	font-weight: bold;
 	letter-spacing: -0.3px;
 	margin: 14.5px 0px 0px 11.3px;
+}
+
+.nav__li_mobile {
+	display: block;
+	margin: 0;
+	padding: 14.5px 72px;
+	font-size: 2.3rem;
 }
 
 .nav__link {
