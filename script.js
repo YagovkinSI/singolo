@@ -1,5 +1,8 @@
 // elements
 const header = document.querySelector('.header');
+const mobileMenuHamburger = document.querySelector(".mobile-menu__hamburger");
+const mobileMenuBackground = document.querySelector(".mobile-menu__bg");
+const logo = document.querySelector('.logo');
 const nav = document.getElementById("nav__ul");
 const blocks = document.querySelectorAll("main>div");
 const slider__control_left = document.querySelector(".slider__control_left");
@@ -19,6 +22,7 @@ const message_ok = document.getElementById("message-ok");
 const HEADER_HEIGHT = header.clientHeight;
 
 // fields
+let isMobileMenuShow = false;
 let active_slide = 0;
 let is_enable = true;
 let is_to_end = true;
@@ -27,7 +31,8 @@ let is_func_end = true;
 
 
 // events
-document.addEventListener("scroll", onScroll)
+document.addEventListener("scroll", onScroll);
+mobileMenuHamburger.addEventListener("click", onMobileMenuClick);
 slides.forEach(slide => {
     slide.addEventListener("animationend", animationend_slide)
 });
@@ -55,6 +60,31 @@ function onScroll() {
             nav_element.classList.remove("nav__link_active");
         }
     })
+}
+
+function onMobileMenuClick() {
+    isMobileMenuShow = !isMobileMenuShow;
+    mobileMenuHamburger.classList.toggle("mobile-menu_vertical");
+    mobileMenuBackground.classList.toggle("invisible");
+    logo.classList.toggle("logo_left");  
+    var nav__li_array = document.querySelectorAll(".nav__li");
+    if (isMobileMenuShow) {
+        nav__li_array.forEach(li => {
+            li.classList.add("nav__li_mobile");
+            if (li.classList.contains("nav__point"))
+                li.classList.add("invisible");
+        });
+        nav.classList.add("nav__ul_mobile");
+        document.querySelector(".mobile-menu__panel").append(nav);
+    }
+    else {
+        nav__li_array.classList.forEach(li => {
+            li.classList.remove("nav__li_mobile");
+            li.classList.remove("invisible");
+        });
+        nav.classList.remove("nav__ul_mobile");
+        document.querySelector(".nav").append(nav);
+    }
 }
 
 function navigation(event) {
