@@ -78,7 +78,7 @@ function onMobileMenuClick() {
         document.querySelector(".mobile-menu__panel").append(nav);
     }
     else {
-        nav__li_array.classList.forEach(li => {
+        nav__li_array.forEach(li => {
             li.classList.remove("nav__li_mobile");
             li.classList.remove("invisible");
         });
