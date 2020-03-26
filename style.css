@@ -612,21 +612,9 @@ p {
 }
 
 .face {
-	height: 299px;
+	width: 100%;
 	padding-bottom: 1px;
 	margin-bottom: 15px;
-}
-
-.face__1 {
-	background-image: url(assets/faces/f1.png);
-}
-
-.face__2 {
-	background-image: url(assets/faces/f2.png);
-}
-
-.face__3 {
-	background-image: url(assets/faces/f3.png);
 }
 
 .about-person {
@@ -726,7 +714,7 @@ p {
 }
 
 .input {
-	width: 97%;
+	width: calc(100% - 33px);
 	margin-bottom: 15px;
 	padding: 9px 15px;
 	background-color: #d6564f;
@@ -762,6 +750,7 @@ input:invalid {
 	width: 80px;
 	border: 1px solid #d6564f;
 	background-color: #d6564f;
+	text-align: center;
 }
 
 .button:hover {
@@ -823,7 +812,7 @@ footer {
 
 .message {
 	position: absolute;
-	min-width: 470px;
+	min-width: 50%;
 	padding: 10px 10px;
 	top: 25%;
 	left: 25%;
@@ -865,6 +854,10 @@ footer {
 	.header__content {
 		padding: 26px 36px 17px 40px;
 	}
+
+	.scroll-margin-top {
+		scroll-margin-top: 71px;
+	}
 	
 	.mobile-menu {
 		display: block;
@@ -894,6 +887,10 @@ footer {
 		grid-template-columns: repeat(1, 1fr);
 	}
 
+	.tags-li {
+		padding: 0 5px 0;
+	}
+
 	#portfolio-grid {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(4, 1fr);
@@ -906,8 +903,21 @@ footer {
 
 	.get-a-quote__grid {
 		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 0px;
 	}
-}
+
+	.button {
+		width: 100%;
+	}
+
+	.footer__text {
+		display: none;
+	}
+
+	.soc_icos {
+		width: 100%;
+		text-align: center;
+	}
 
 @media (max-width: 374px) {
 }
