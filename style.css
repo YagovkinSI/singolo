@@ -32,6 +32,7 @@ html {
 }
 
 h1 {
+	font-size: 2.5rem;
 	display: inline-block;
 	font-weight: bold;
 	text-decoration: none;
@@ -614,7 +615,7 @@ p {
 .face {
 	width: 100%;
 	padding-bottom: 1px;
-	margin-bottom: 15px;
+	margin-bottom: 13px;
 }
 
 .about-person {
@@ -676,7 +677,7 @@ p {
 
 .get-a-quote__grid {
 	display: grid;
-	grid-gap: 33px;
+	grid-gap: 15px;
 	grid-template-columns: 2fr 1fr;
 	margin-top: 30px;
 }
@@ -686,7 +687,7 @@ p {
 }
 
 .get-a-quote__info {
-	padding: 11px 0 0 2.5px;
+	padding: 11px 0 0 10px;
 }
 
 .get-a-quote__info__text {
@@ -852,15 +853,19 @@ footer {
 
 @media (max-width: 767px) {
 	.header__content {
-		padding: 26px 36px 17px 40px;
+		padding: 26px 36px 24px 40px;
 	}
 
 	.scroll-margin-top {
-		scroll-margin-top: 71px;
+		scroll-margin-top: 72px;
 	}
-	
+
 	.mobile-menu {
 		display: block;
+	}
+
+	h1 {
+		font-size: 1.8rem;
 	}
 
 	.logo {
@@ -880,7 +885,7 @@ footer {
 	}
 
 	.slider {
-		margin-top: 71px;
+		margin-top: 72px;
 	}
 
 	.services__grid {
@@ -918,6 +923,15 @@ footer {
 		width: 100%;
 		text-align: center;
 	}
+
+	.contacts {
+		margin-bottom: 40px;
+	}
+
+	.splitter {
+		height: 0;
+	}
+}
 
 @media (max-width: 374px) {
 }
