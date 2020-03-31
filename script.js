@@ -90,6 +90,8 @@ function onMobileMenuClick() {
 function navigation(event) {
     nav.querySelectorAll("a").forEach(li => li.classList.remove("nav__link_active"));
     event.target.classList.add("nav__link_active");
+    if (isMobileMenuShow)
+        onMobileMenuClick();
 }
 
 function tags_navigation(event) {
